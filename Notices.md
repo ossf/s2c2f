@@ -2,7 +2,8 @@
 
 ## Code of Conduct
 
-Contact for Code of Conduct issues or inquires:  [opencode@microsoft.com](mailto:opencode@microsoft.com)
+Code of Conduct issues or inquires:  See the FAQ at
+https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
 
 
 ## License Acceptance
