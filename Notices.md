@@ -2,8 +2,9 @@
 
 ## Code of Conduct
 
-Code of Conduct issues or inquires:  See the FAQ at
-https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
+Contact for Code of Conduct issues or inquires:
+* Jay White (jaywhite@microsoft.com)
+* Adrian Diglio (adrian.diglio@microsoft.com)
 
 
 ## License Acceptance
