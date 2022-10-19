@@ -1,11 +1,11 @@
-# Maintaining the OSS SSC Framework Specification
+# Maintaining the S2C2F Specification
 
 > ⭐: **Click
 > _[here](Open_Source_Software_(OSS)_Secure_Supply_Chain_(SSC)_Framework.pdf)_ for the PDF of the specification**
 
 ## Updates to the specification
 
-The OSS SSC Framework specification is intended to be a living document
+The S2C2F specification is intended to be a living document
 created and maintained for the community by its members.
 
 Updates to the whitepaper, suggestions for updates, or discussion for updates
@@ -14,7 +14,7 @@ submitted to the repo and labeled with "discussion" and "specification".
 
 ### Markdown
 
-The living OSS SSC Framework is captured in [markdown](framework.md) and is where all updates will take place.
+The living S2C2F is captured in [markdown](framework.md) and is where all updates will take place.
 
 ### Contributing updates
 
@@ -35,25 +35,25 @@ are considered minor changes to the overall content and will not warrant the
 regeneration of the PDF.
 
 When significant changes to the intent, content, or numerous minor changes
-occur, the OSS SSC Framework working group will assess and determine if a new major version
+occur, the S2C2F SIG will assess and determine if a new major version
 of the PDF needs to be published.  When this decision is made, the markdown content
-will be converted to text document and sent to the OSS SSC Framework technical writers to
+will be converted to text document and sent to the S2C2F technical writers to
 create the PDF.  The PDF will then be published back into the repository
 annotating the new version, updating the links in the README.md accordingly.
 
 Minor updates to the markdown shall receive a minor version bump indicated in
 the Metadata table of the document and recorded as WIP.  When enough significant
 changes have been recorded, the markdown will be placed "In Review" (via PR) and
-solicited to the OSS SSC Framework mailing list for review, at a
+solicited to the S2C2F SIG mailing list for review, at a
 minimum.
 
-Upon completion of review, the OSS SSC Framework technical writer shall provide final
+Upon completion of review, the S2C2F technical writer shall provide final
 approval on the PR.  At which point the markdown state will be changed to
 "Approved" and merged.
 
 ## Original design decisions
 
-The OSS SSC Framework creation occurred using the below general design decisions which
+The S2C2F creation occurred using the below general design decisions which
 should be considered when updating the content.
 
 * Consider if the content already exists elsewhere.  Provide references to
