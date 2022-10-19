@@ -1,82 +1,67 @@
-# Secure Supply Chain Consumption Framework (S2C2F) SIG
-
-<img alt="secure package icon" src="images/secure-package-icon.png" width=15%>
-
-The S2C2F SIG is a group working within the OpenSSF's Supply Chain Integrity Working Group formed to further develop and continuously improve the S2C2F guide which outlines and defines how to securely consume Open Source Software (OSS) dependencies into the developer’s workflow. This paper is split into two parts: a solution-agonistic set of practices and a maturity model-based implementation guide. The Framework is targeted toward organizations that do software development, that take a dependency on open source software, and that seek to improve the security of their software supply chain.
-
-
-## 
-**Motivation**
-
-[Background / use cases of the problem to be solved]
-
-
-## 
-**Objective**
-
-The objective for the S2C2F SIG is to develop and continuosly improve upon a guide that provides the following:
-
-* A high-level solution-agnostic set of practices 
-* A detailed list of requirements 
-* A list of real-world supply chain threats specific to OSS, and how our Framework requirements mitigates them 
-* A maturity model-based implementation guide, with links to tools from across the industry 
-* A process for assessing your organization’s maturity 
-* A mapping of the Framework requirements to 6 other supply chain specifications 
-
-
-## 
-**Scope**
-
-[What is in and out of scope]
-
-
-## 
-## View or Download the S2C2F Specification
+# Maintaining the OSS SSC Framework Specification
 
 > ⭐: **Click
-> _[here](./specification/Open_Source_Software_(OSS)_Secure_Supply_Chain_(SSC)_Framework.pdf)_ for the PDF of the specification**
-> 
-> :atom:: **Click _[here](./specification/framework.md)_ to view the specification in markdown**
+> _[here](Open_Source_Software_(OSS)_Secure_Supply_Chain_(SSC)_Framework.pdf)_ for the PDF of the specification**
 
-# 
-**Get Involved**
+## Updates to the specification
 
-*   Official communications occur on the [openssf-sig-s2c2f@lists.openssf.org](https://lists.openssf.org/g/openssf-sig-s2c2f).  \
-[Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
-*   [S2C2F SIG Slack](https://openssf.slack.com/archives/C03THTH3RSM)
-*   [Supply Chain Integrity WG Slack](https://openssf.slack.com/archives/C01A1MA7A1K)
+The OSS SSC Framework specification is intended to be a living document
+created and maintained for the community by its members.
 
-### 
-Quick Start
+Updates to the whitepaper, suggestions for updates, or discussion for updates
+should initiate with an [issue](https://github.com/microsoft/oss-ssc-framework/issues)
+submitted to the repo and labeled with "discussion" and "specification".
 
-*   Areas that need contributions
-*   Build information if applicable
-*   Where to file issues
-*   Etc.
+### Markdown
 
-## 
-**Meeting times**
+The living OSS SSC Framework is captured in [markdown](framework.md) and is where all updates will take place.
 
-[TODO: Update with your WG meeting details]
-*   Every other Tuesday @ 12:00pm PST The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
-*   [Meeting Minutes](https://docs.google.com/document/d/10Q_VOvKsGaYJoK-5yJY4868mTkYZjEo-6xV6ghYS84k/edit?userstoinvite=isaach@google.com&actionButton=1#heading=h.1tv8gumsrtbf)
+### Contributing updates
 
-# 
-**Governance**
+All members of the community are welcome to contribute updates to the OSS SSC Framework specification. We
+ask potential contributors to refer to the original design decisions, listed
+below, as guidance when determining the content of their updates.
 
-[TODO: Update this link to your specific CHARTER.md file]
-The [CHARTER.md](https://github.com/ossf/project-template/blob/main/CHARTER.md) outlines the scope and governance of our group activities.
+It is highly recommended that you seek peer review for your updates beyond that
+of the Technical Leads of the working group.
 
+After the issue has been triaged in the community call, and has been tagged with "Spec Change", the next step is to submit a PR to the [markdown](framework.md) with the proposed changes. Once the PR is submitted, please link the PR to the issue to request a review.
 
-*   Lead: Adrian Diglio (https://github.com/adriandiglio)
-*   Co-Lead: Jay White (https://github.com/camaleon2016)
+### Versioning and publishing
 
-## SIG Maintainers
-- [Jay White, Microsoft](https://github.com/camaleon2016)
-- [Adrian Diglio, Microsoft](https://github.com/adriandiglio)
-- [Jasmine Wang, Microsoft](https://github.com/jasminewang0)
+It is expected that many minor updates will occur, corrections to grammar,
+spelling, clarification in language, translations, etc.  When these occur they
+are considered minor changes to the overall content and will not warrant the
+regeneration of the PDF.
 
+When significant changes to the intent, content, or numerous minor changes
+occur, the OSS SSC Framework working group will assess and determine if a new major version
+of the PDF needs to be published.  When this decision is made, the markdown content
+will be converted to text document and sent to the OSS SSC Framework technical writers to
+create the PDF.  The PDF will then be published back into the repository
+annotating the new version, updating the links in the README.md accordingly.
 
-## SIG Collaborators
-- [Christopher "CRob" Robinson, Intel](https://github.com/SecurityCRob)
-- [David A Wheeler, LF/OSSF](https://github.com/david-a-wheeler)
+Minor updates to the markdown shall receive a minor version bump indicated in
+the Metadata table of the document and recorded as WIP.  When enough significant
+changes have been recorded, the markdown will be placed "In Review" (via PR) and
+solicited to the OSS SSC Framework mailing list for review, at a
+minimum.
+
+Upon completion of review, the OSS SSC Framework technical writer shall provide final
+approval on the PR.  At which point the markdown state will be changed to
+"Approved" and merged.
+
+## Original design decisions
+
+The OSS SSC Framework creation occurred using the below general design decisions which
+should be considered when updating the content.
+
+* Consider if the content already exists elsewhere.  Provide references to
+  comprehensive information on a topic rather than re-writing the content.  This
+  not only allows us to provide summarization of complex topics, but also
+  exposes the audience to other avenues of information for which they may be
+  unaware.
+* Determine if the content is better suited as it's own document, such as a
+  how-to, blog, or whitepaper of itself.
+* Determine if your suggestion belongs in the high-level solution-agnostic set of Practices - which can be used in any scenario - or if your suggestion is more of a detailed implementation-level requirement.
+* Identify if the proposed requirement is realistic or aspirational. Suggest a level of maturity that fits with the themes for each maturity level.
