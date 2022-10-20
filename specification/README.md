@@ -20,7 +20,7 @@ The living S2C2F is captured in [markdown](framework.md) and is where all update
 
 ### Contributing updates
 
-All members of the community are welcome to contribute updates to the OSS SSC Framework specification. We
+All members of the community are welcome to contribute updates to the S2C2 Framework specification. We
 ask potential contributors to refer to the original design decisions, listed
 below, as guidance when determining the content of their updates.
 
