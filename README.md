@@ -28,7 +28,7 @@ The objective for the S2C2F SIG is to develop and continuosly improve upon a gui
 ## View or Download the S2C2F Specification
 
 > ⭐: **Click
-> _[here](./specification/Secure_Supply_Chain_Consumption_Framework_(S2C2F)_Framework.pdf)_ for the PDF of the specification**
+> _[here](./specification/Secure_Supply_Chain_Consumption_Framework_(S2C2F).pdf)_ for the PDF of the specification**
 > 
 > :atom:: **Click _[here](./specification/framework.md)_ to view the specification in markdown**
 
