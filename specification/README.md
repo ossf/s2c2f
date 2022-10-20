@@ -1,7 +1,7 @@
 # Maintaining the S2C2F Specification
 
 > ⭐: **Click
-> _[here](Secure_Supply_Chain_Consumption_Framework_(S2C2F)_Framework.pdf)_ for the PDF of the specification**
+> _[here](Secure_Supply_Chain_Consumption_Framework_(S2C2F).pdf)_ for the PDF of the specification**
 
 ## Updates to the specification
 
