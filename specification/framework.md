@@ -37,7 +37,7 @@ Licensed under [Community Specification License 1.0](https://github.com/Communit
 | Date | Author | Version | Change Reference |
 | --- | --- | --- | --- |
 | 8/1/2022 | Adrian Diglio (Microsoft) | 1.0 | Initial release |
-| 9/28/2022 | Jasmine Wang (Microsoft) | 1.1 | Resolving issues [#5](https://github.com/microsoft/oss-ssc-framework/issues/5), [#6](https://github.com/microsoft/oss-ssc-framework/issues/6), [#7](https://github.com/microsoft/oss-ssc-framework/issues/7), [#9](https://github.com/microsoft/oss-ssc-framework/issues/9), [#1](https://github.com/ossf/s2c2f/issues/1). Replaced references to "Microsoft OSS SSC Framework" with "Secure Supply Chain Consumption Framework." |
+| 10/19/2022 | Jasmine Wang (Microsoft) | 1.1 | Resolving issues [#5](https://github.com/microsoft/oss-ssc-framework/issues/5), [#6](https://github.com/microsoft/oss-ssc-framework/issues/6), [#7](https://github.com/microsoft/oss-ssc-framework/issues/7), [#9](https://github.com/microsoft/oss-ssc-framework/issues/9), [#1](https://github.com/ossf/s2c2f/issues/1). Replaced references to "Microsoft OSS SSC Framework" with "Secure Supply Chain Consumption Framework." |
 
 # Introduction
 
