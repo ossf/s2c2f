@@ -1,6 +1,6 @@
 <img alt="secure package icon" src="../images/secure-package-icon.png" width=15%>
 
-# Open Source Software (OSS) Secure Supply Chain (SSC) Framework Simplified Requirements
+# Secure Supply Chain Consumption Framework (S2C2F) Simplified Requirements
 
 This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
 
@@ -14,34 +14,34 @@ Licensed under [Community Specification License 1.0](https://github.com/Communit
 
 * [Document Change Record](#document-change-record)
 * [Introduction](#introduction)
-* [About the OSS SSC Framework](#about-the-oss-ssc-framework)
-* [What is the OSS SSC Framework?](#what-is-the-oss-ssc-framework)
+* [About the Secure Supply Chain Consumption Framework](#about-the-secure-supply-chain-consumption-framework)
+* [What is the Secure Supply Chain Consumption Framework?](#what-is-the-secure-supply-chain-consumption-framework)
 * [Common OSS Supply Chain Threats](#common-oss-supply-chain-threats)
-* [OSS SSC Framework Practices](#oss-ssc-framework-practices)
+* [Secure Supply Chain Consumption Framework Practices](#secure-supply-chain-consumption-framework-practices)
   * [Target Audience](#target-audience)
-  * [OSS SSC Framework Practices](#oss-ssc-framework-practices-1)
-* [The OSS SSC Framework Implementation Guide](#the-oss-ssc-framework-implementation-guide)
+  * [Secure Supply Chain Consumption Framework Practices](#secure-supply-chain-consumption-framework-practices-1)
+* [The Secure Supply Chain Consumption Framework Implementation Guide](#the-secure-supply-chain-consumption-framework-implementation-guide)
   * [Target Audience](#target-audience-1)
-  * [OSS SSC Framework Levels of Maturity](#oss-ssc-framework-levels-of-maturity)
+  * [Secure Supply Chain Consumption Framework Levels of Maturity](#secure-supply-chain-consumption-framework-levels-of-maturity)
   * [How to Assess Where Your Organization is in the Maturity Model?](#how-to-assess-where-your-organization-is-in-the-maturity-model)
-  * [OSS SSC Framework Requirements](#oss-ssc-framework-requirements)
-  * [OSS SSC Framework Tooling Availability](#oss-ssc-framework-tooling-availability)
-  * [Implementing the OSS SSC Framework by Level](#implementing-the-oss-ssc-framework-by-level)
+  * [Secure Supply Chain Consumption Framework Requirements](#secure-supply-chain-consumption-framework-requirements)
+  * [Secure Supply Chain Consumption Framework Tooling Availability](#secure-supply-chain-consumption-framework-tooling-availability)
+  * [Implementing the Secure Supply Chain Consumption Framework by Level](#implementing-the-secure-supply-chain-consumption-framework-by-level)
 * [Conclusion](#conclusion)
-* [Appendix: Relation to SCITT](#Appendix-Relation-to-SCITT)
-* [Appendix: Mapping OSS SSC Framework Requirements to Other Specifications](#Appendix-Mapping-OSS-SSC-Framework-Requirements-to-Other-Specifications)
-* [Appendix: References](#Appendix-References)
+* [Appendix: Relation to SCITT](#appendix-relation-to-scitt)
+* [Appendix: Mapping Secure Supply Chain Consumption Requirements to Other Specifications](#appendix-mapping-secure-supply-chain-consumption-framework-requirements-to-other-specifications)
+* [Appendix: References](#appendix-references)
 
 # Document Change Record
 
 | Date | Author | Version | Change Reference |
 | --- | --- | --- | --- |
 | 8/1/2022 | Adrian Diglio (Microsoft) | 1.0 | Initial release |
-| 9/28/2022 | Jasmine Wang (Microsoft) | 1.1 | Resolving issues [#5](https://github.com/microsoft/oss-ssc-framework/issues/5), [#6](https://github.com/microsoft/oss-ssc-framework/issues/6), [#7](https://github.com/microsoft/oss-ssc-framework/issues/7), [#9](https://github.com/microsoft/oss-ssc-framework/issues/9). Replaced references to "Microsoft OSS SSC Framework" with "OSS SSC Framework." |
+| 9/28/2022 | Jasmine Wang (Microsoft) | 1.1 | Resolving issues [#5](https://github.com/microsoft/oss-ssc-framework/issues/5), [#6](https://github.com/microsoft/oss-ssc-framework/issues/6), [#7](https://github.com/microsoft/oss-ssc-framework/issues/7), [#9](https://github.com/microsoft/oss-ssc-framework/issues/9), [#1](https://github.com/ossf/s2c2f/issues/1). Replaced references to "Microsoft OSS SSC Framework" with "Secure Supply Chain Consumption Framework." |
 
 # Introduction
 
-The purpose of this paper is to illustrate the core concepts of the Open Source Software (OSS) Secure Supply Chain (SSC) Framework to outline and define how to securely consume OSS dependencies, such as NuGet and NPM, into the developer&#39;s workflow. Open Source Software, as adopted from [The Free Software Definition](https://en.wikipedia.org/wiki/The_Free_Software_Definition), is software that ensures that the end users have freedom in using, studying, sharing and modifying that software. For more details about the definition of Open Source Software (OSS), see [The Open Source Definition](https://opensource.org/osd). This framework is applicable to OSS dependencies consumed into the developer's workflow, such as any source code, language package, module, component, container, library, or binary. This guide provides a dedicated framework to enhance any organization&#39;s OSS governance program to address supply chain threats specific to OSS consumption.
+The purpose of this paper is to illustrate the core concepts of the Secure Supply Chain Consumption Framework (S2C2F) to outline and define how to securely consume OSS dependencies, such as NuGet and NPM, into the developer&#39;s workflow. Open Source Software, as adopted from [The Free Software Definition](https://en.wikipedia.org/wiki/The_Free_Software_Definition), is software that ensures that the end users have freedom in using, studying, sharing and modifying that software. For more details about the definition of Open Source Software (OSS), see [The Open Source Definition](https://opensource.org/osd). This framework is applicable to OSS dependencies consumed into the developer's workflow, such as any source code, language package, module, component, container, library, or binary. This guide provides a dedicated framework to enhance any organization&#39;s OSS governance program to address supply chain threats specific to OSS consumption.
 
 OSS has become a critical aspect of any software supply chain. Across the software industry, developers are using and relying upon OSS components to expedite developer productivity and innovation. However, attackers are trying to abuse these package manager ecosystems to either distribute their own malicious components, or to compromise existing OSS components.
 
@@ -49,40 +49,40 @@ This paper is split into two parts: a solution-agonistic set of practices and a 
 
 This paper presents:
 
-- An overview of the OSS SSC Framework Practices.
-- Common supply chain threats with examples and how OSS SSC Framework can help.
-- An overview of the OSS SSC Framework Implementation Guide and Maturity Model.
+- An overview of the Secure Supply Chain Consumption Framework (S2C2F) Practices.
+- Common supply chain threats with examples and how the S2C2F can help.
+- An overview of the S2C2F Implementation Guide and Maturity Model.
 - A process for assessing your organization&#39;s maturity.
-- Detailed walkthrough of the OSS SSC Framework implementation requirements and tools.
-- A mapping of the OSS SSC Framework requirements to other specifications.
+- Detailed walkthrough of the S2C2F implementation requirements and tools.
+- A mapping of the S2C2F requirements to other specifications.
 
 The guidance provided in this paper is targeted toward organizations that do software development, that take a dependency on open source software, and that seek to improve the security of their software supply chain.
 
-# About the OSS SSC Framework
+# About the Secure Supply Chain Consumption Framework
 
-The OSS SSC Framework is a security assurance and risk reduction process that is focused on securing how developers consume open source software. As a Microsoft-wide initiative since 2019, the OSS SSC Framework provides security guidance and tools throughout the developer inner-loop and outer-loop processes that have played a critical role in defending and preventing supply chain attacks through consumption of open source software across Microsoft. Using a threat-based risk-reduction approach, the goals of the OSS SSC Framework are to:
+The Secure Supply Chain Consumption Framework (S2C2F) is a security assurance and risk reduction process that is focused on securing how developers consume open source software. As a Microsoft-wide initiative since 2019, the S2C2F provides security guidance and tools throughout the developer inner-loop and outer-loop processes that have played a critical role in defending and preventing supply chain attacks through consumption of open source software across Microsoft. Using a threat-based risk-reduction approach, the goals of the S2C2F are to:
 
 1. Provide a strong OSS governance program
 2. Improve the Mean Time To Remediate (MTTR) for resolving known vulnerabilities in OSS
 3. Prevent the consumption of compromised and malicious OSS packages
 
-The OSS SSC Framework (described later in this document) is modeled after three core concepts—_control all artifact inputs, continuous process improvement, and scale._
+The S2C2F (described later in this document) is modeled after three core concepts—_control all artifact inputs, continuous process improvement, and scale._
 
 <p align="center">
  <img alt="framework diagram" src="../images/Diagram-white-bkg.png" width=70%>
 </p>
 
 - _Control All Artifact Inputs_: There are a myriad of ways that developers consume OSS today: git clone, wget, copy &amp; pasted source, checking-in the binary into the repo, direct from public package managers, repackaging the OSS into a .zip, curl, apt-get, git submodule, and more. Securing the OSS supply chain in any organization is going to be near impossible if developer teams don&#39;t follow a uniform process for consuming OSS. Enforcing an effective secure OSS supply chain strategy necessitates standardizing your OSS consumption process across the various developer teams throughout your organization, so all developers consume OSS using governed workflows.
-- _Continuous Process Improvement_: To help guide organizations through continuous process improvement, we have organized the OSS SSC Framework into a maturity model. This helps organizations prioritize which requirements they should implement first. Since security risk is dynamic and new threats can emerge at any time, the OSS SSC Framework places heavy emphasis on understanding the new threats to the OSS supply chain and _requires_ regular evaluation of OSS SSC Frameworkcontrols and introduction of changes in response to new technology advancements or new threats.
-- _Scale_:The OSS SSC Framework tools were designed with scale in mind. Some organizations may attempt to secure their OSS ingestion process through a central internal registry that all developers within the organization are supposed to pull from. However, what if one developer chooses to pull straight from pypi.org or npmjs.com? Is there anything preventing them from doing so? A central internal registry also has the problem of requiring a team to manage the process and workflow, which is extra overhead. As such, the OSS SSC Framework tools were developed to secure how they consume OSS today at scale without requiring a central internal registry or central governance body.
+- _Continuous Process Improvement_: To help guide organizations through continuous process improvement, we have organized the S2C2F into a maturity model. This helps organizations prioritize which requirements they should implement first. Since security risk is dynamic and new threats can emerge at any time, the S2C2F places heavy emphasis on understanding the new threats to the OSS supply chain and _requires_ regular evaluation of S2C2F controls and introduction of changes in response to new technology advancements or new threats.
+- _Scale_:The S2C2F tools were designed with scale in mind. Some organizations may attempt to secure their OSS ingestion process through a central internal registry that all developers within the organization are supposed to pull from. However, what if one developer chooses to pull straight from pypi.org or npmjs.com? Is there anything preventing them from doing so? A central internal registry also has the problem of requiring a team to manage the process and workflow, which is extra overhead. As such, the S2C2F tools were developed to secure how they consume OSS today at scale without requiring a central internal registry or central governance body.
 
-# What is the OSS SSC Framework?
+# What is the Secure Supply Chain Consumption Framework?
 
-The OSS SSC Framework is a combination of requirements and tools for any organization to adopt. The Framework includes a capability maturity roadmap to help establish a secure OSS ingestion process to protect developers from OSS supply chain threats and to establish a strong governance program to manage your organization&#39;s use of OSS.
+The S2C2F Framework is a combination of requirements and tools for any organization to adopt. The Framework includes a capability maturity roadmap to help establish a secure OSS ingestion process to protect developers from OSS supply chain threats and to establish a strong governance program to manage your organization&#39;s use of OSS.
 
 # Common OSS Supply Chain Threats
 
-The OSS SSC Framework was designed based on known threats (i.e. tactics and techniques) used by adversaries to compromise OSS packages. The table below is a comprehensive compilation of OSS supply chain threats with links to real examples. It also identifies which OSS SSC Framework requirements mitigate the threat. To see the full list of requirements and their benefits, please see the [OSS SSC Framework Requirements](#oss-ssc-framework-requirements) later in this document.
+The S2C2F was designed based on known threats (i.e. tactics and techniques) used by adversaries to compromise OSS packages. The table below is a comprehensive compilation of OSS supply chain threats with links to real examples. It also identifies which S2C2F requirements mitigate the threat. To see the full list of requirements and their benefits, please see the [Secure Supply Chain Consumption Framework Requirements](#secure-supply-chain-consumption-framework-requirements) later in this document.
 
 For other sources of OSS threats, please see the following links:
 
@@ -90,7 +90,7 @@ For other sources of OSS threats, please see the following links:
 - [Taxonomy of Attacks on Open-Source Software Supply Chains](https://arxiv.org/pdf/2204.04008.pdf)
 - [Software Supply Chain Threats](https://cloud.google.com/software-supply-chain-security/docs/attack-vectors)
 
-| **OSS Supply Chain Threat** | **Real Example** | **Mitigation via OSS SSC Framework Requirement** |
+| **OSS Supply Chain Threat** | **Real Example** | **Mitigation via S2C2F Requirement** |
 | --- | --- | --- |
 | Accidental vulnerabilities in OSS code or Containers that we inherit | [SaltStack](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/) | UPD-2 <br /> UPD-3 |
 | Intentional vulnerabilities/backdoors added to an OSS code base | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | SCA-5 |
@@ -105,13 +105,13 @@ For other sources of OSS threats, please see the following links:
 | Vulnerability not fixed by upstream maintainer in desired timeframe | [Prototype Pollution in Lodash](https://hackerone.com/reports/712065) | FIX-1 |
 | Bad actor compromises a package manager account (e.g. npm) with no change to the corresponding open source repo and uploads a new malicious version of a package | [Ua-parser-js](https://www.truesec.com/hub/blog/uaparser-js-npm-package-supply-chain-attack-impact-and-response) | AUD-1 <br /> ENF-2 <br /> SCA-4 |
 
-# OSS SSC Framework Practices
+# Secure Supply Chain Consumption Framework Practices
 
 ## Target Audience
 
 This section is a solution-agonistic description of what should be implemented to secure your organization&#39;s OSS supply chain. The guidance is useful to compliance/risk managers, security managers, engineering managers, and Chief Information Security Officers (CISOs).
 
-## OSS SSC Framework Practices
+## Secure Supply Chain Consumption Framework Practices
 
 ### _Practice 1: Ingest It_
 
@@ -227,15 +227,15 @@ Related to the note below, the implemented fix should be confidentially contribu
 > - Being present and participating in key open source projects to share fixes or expertise
 > - See Microsoft's approach toward contributing to open source for more ideas [Microsoft&#39;s Open Source Program | Microsoft Open Source](https://opensource.microsoft.com/program#program-contributing)
 
-# The OSS SSC Framework Implementation Guide
+# The Secure Supply Chain Consumption Framework Implementation Guide
 
 ## Target Audience
 
 This section details a maturity model, which splits the practices in the previous section into 4 levels to achieve. There is also a list of tools your organization can implement to meet each security level in the framework. The guidance is useful to software developers, Continuous Integration and Continuous Development (CI/CD) administrators, and security practitioners.
 
-## OSS SSC Framework Levels of Maturity
+## Secure Supply Chain Consumption Framework Levels of Maturity
 
-When the OSS SSC Framework was first developed, the strategy to secure our OSS supply chain was comprised of 8 practices.
+When the S2C2F was first developed, the strategy to secure our OSS supply chain was comprised of 8 practices.
 
 <p align="center">
  <img alt="list of practices" src="../images/8-practices-white-bkg.png" width=40%>
@@ -261,7 +261,7 @@ Depending on the projects and their criteria, you may have a mix of framework le
 
 Any maturity assessment should be done at the Organization level, so that it assesses multiple different OSS consumption processes from across different development teams. Some teams may have more mature processes than others, even within a single organization, so it&#39;s best to perform a company-wide assessment to determine OSS consumption practices across a diverse set of software development teams. The steps to perform a Maturity Assessment are below:
 
-1. **Prepare for Assessment**. The first step is to understand the concepts behind the OSS SSC Framework so you feel comfortable engaging with developers and engineers to inquire about their existing tools, capabilities, and workflows. Next, identify a good sample size of diverse development teams from across the company to interview.
+1. **Prepare for Assessment**. The first step is to understand the concepts behind the S2C2F so you feel comfortable engaging with developers and engineers to inquire about their existing tools, capabilities, and workflows. Next, identify a good sample size of diverse development teams from across the company to interview.
 2. **Perform the Assessment**. This is where you assess the organization&#39;s degree of maturity in software developer OSS management, security, and consumption processes. Here are a set of example questions that you can ask:
     1. What type of OSS do you consume in your project?(e.g. native C/C++, NuGet, PyPI, npm, etc.)
     2. How are you consuming your OSS into your project? (e.g. Using a Package Cache solution such as Azure Artifacts, commands such as curl or git clone, checking in the OSS into the repo, etc.)
@@ -284,11 +284,11 @@ Any maturity assessment should be done at the Organization level, so that it ass
     19. Do you rebuild any of the open source internally?
     20. Do you have an incident response plan or playbook for reacting to an incident of consuming a malicious OSS component?
 
-1. **Plan for Improvements.** Based on the interviews and answers you received from across your organization, you should be able to determine where you fall within the OSS SSC Framework Maturity Levels. It&#39;s possible that some teams may be ahead of others, so your focus should be on elevating all development teams to a specific Maturity Level. It&#39;s suggested that you accomplish this by driving standardization in both process and tooling across your software development teams for consuming OSS.
+3. **Plan for Improvements.** Based on the interviews and answers you received from across your organization, you should be able to determine where you fall within the S2C2F Maturity Levels. It&#39;s possible that some teams may be ahead of others, so your focus should be on elevating all development teams to a specific Maturity Level. It&#39;s suggested that you accomplish this by driving standardization in both process and tooling across your software development teams for consuming OSS.
 
-The OSS SSC Framework categorizes its requirements into maturity levels to better help you prioritize investments in improvements. Additionally, the OSS SSC Framework recommends tooling with specific capabilities that mitigates against the known supply chain threats, but you probably should make business decisions about which set of tools are right for your business and your security goals.
+The S2C2F categorizes its requirements into maturity levels to better help you prioritize investments in improvements. Additionally, the S2C2F recommends tooling with specific capabilities that mitigates against the known supply chain threats, but you probably should make business decisions about which set of tools are right for your business and your security goals.
 
-## OSS SSC Framework Requirements
+## Secure Supply Chain Consumption Framework Requirements
 
 Below is a table of the requirements mapped to the 8 different practices. Two of the requirements have prerequisites identified that are outside the scope of this document to list as requirements.
 
@@ -296,7 +296,7 @@ Below is a table of the requirements mapped to the 8 different practices. Two of
 | --- | --- | --- | --- | --- |
 | *Ingest it* | ING-1 | L1 | Use package managers trusted by your organization | Your organization benefits from the inherent security provided by the package manager |
 | | ING-2 | L1 | Use an OSS binary repository manager solution | Caches a local copy of the OSS artifact and protects against [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) incidents, enabling developers to continue to build even if upstream resources are unavailable |
-| | ING-3 | L2 | Have a Deny List capability to block known malicious OSS from being consumed | Prevents ingestion of known malware by blocking ingestion as soon as a critically vulnerable OSS component is identified, such as [colors v 1.4.1](https://security.snyk.io/vuln/SNYK-JS-COLORS-2331906), or if an OSS component is deemed malicious |
+| | ING-3 | L3 | Have a Deny List capability to block known malicious OSS from being consumed | Prevents ingestion of known malware by blocking ingestion as soon as a critically vulnerable OSS component is identified, such as [colors v 1.4.1](https://security.snyk.io/vuln/SNYK-JS-COLORS-2331906), or if an OSS component is deemed malicious |
 | | ING-4 | L3 | Mirror a copy of all OSS source code to an internal location | Business Continuity and Disaster Recovery (BCDR) scenarios. Also enables proactive security scanning, fix it scenarios, and ability to rebuild OSS in a trusted build environment. |
 | *Scan It* | SCA-1 | L1 | Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.) | Able to update OSS to reduce risks |
 | | SCA-2 | L1 | Scan OSS for licenses | Ensure your organization remains in compliance with the software license |
@@ -320,43 +320,43 @@ Below is a table of the requirements mapped to the 8 different practices. Two of
 | | REB-4 | L4 | Digitally sign the SBOMs you produce | Ensures that consumers of your SBOMs can trust that the contents have not been tampered with |
 | *Fix It + Upstream* | FIX-1 | L4 | Implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer | To be used only in extreme circumstances when the risk is too great and to be used temporarily until the upstream maintainer issues a fix. |
 
-## OSS SSC Framework Tooling Availability
+## Secure Supply Chain Consumption Framework Tooling Availability
 
-**Comprehensive Tooling available in v1.0 of the OSS SSC Framework:**
+**Comprehensive Tooling available in v1.0 of the S2C2F:**
 
 The guidance and tooling in this document are a combination of paid and free tools from both Microsoft and across the industry.
 
-**Tooling available in future iterations of the OSS SSC Framework:**
+**Tooling available in future iterations of the S2C2F:**
 
 In the future, Microsoft plans on releasing more tools to help organizations secure their software supply chain end-to-end.
 
-## Implementing the OSS SSC Framework by Level
+## Implementing the Secure Supply Chain Consumption Framework by Level
 
-Below is a table of the OSS SSC Framework requirements with example tools from across the industry or detailed instructions to implement them, sorted by maturity level. Many of the tools referenced below are freely available and are listed as such. Some tools that are individually listed are available through a bundled offering, such as [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.4/get-started/learning-about-github/about-github-advanced-security) (GHAS). We aren&#39;t specifically endorsing any tool or service, as they each have different strengths or weaknesses. We recommend performing a thorough evaluation before deciding on a specific solution, including tools not referenced in this document.
+Below is a table of the S2C2F requirements with example tools from across the industry or detailed instructions to implement them, sorted by maturity level. Many of the tools referenced below are freely available and are listed as such. Some tools that are individually listed are available through a bundled offering, such as [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.4/get-started/learning-about-github/about-github-advanced-security) (GHAS). We aren&#39;t specifically endorsing any tool or service, as they each have different strengths or weaknesses. We recommend performing a thorough evaluation before deciding on a specific solution, including tools not referenced in this document.
 
-This table maps each Framework requirement to corresponding level and Framework practice. To see the full list of requirements and their benefits, please see the [OSS SSC Framework Requirements](#OSS-SSC-Framework-Requirements) earlier in this document.
+This table maps each Framework requirement to corresponding level and Framework practice. To see the full list of requirements and their benefits, please see the [Secure Supply Chain Consumption Framework Requirements](#Secure-Supply-Chain-Consumption-Framework-Requirements) earlier in this document.
 
 | **Practice name** | **L1** | **L2** | **L3** | **L4** |
 | --- | --- | --- | --- | --- |
-| **Ingest it** – save a local copy of artifacts and source code | [**ING-1**] Use package managers trusted by your organization <br /> [**ING-2**] Saving a local copy of the OSS artifact can be done by adopting an integrated package caching solution into your CI/CD infrastructure. All developers across your organization should standardize their consumption methods (using governed workflows) so that security policy can be enforced. <br /><br /> **Free Tools:** [VCPKG for C/C++ OSS](https://github.com/Microsoft/vcpkg), [Pulp](https://pulpproject.org/) <br /> **Paid Tools:** [Artifacts](https://docs.microsoft.com/en-us/azure/devops/artifacts/start-using-azure-artifacts?view=azure-devops), [GitHub Packages](https://github.com/features/packages), [Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal), [PackageCloud](https://packagecloud.io/) | [**ING-3**] Having a Deny List capability to block ingestion of vulnerable and malicious OSS components is a required defensive tool in incident response situations. Having an incident response team that can rapidly respond and update the deny list is also critical. <br /><br /> **Paid Tool:** [Nexus Firewall](https://www.sonatype.com/products/firewall) | [**ING-4**] Saving a local copy of the OSS source code <br /><br /> **Free Tool:** [Duplicating a repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository) | |
+| **Ingest it** – save a local copy of artifacts and source code | [**ING-1**] Use package managers trusted by your organization <br /> [**ING-2**] Saving a local copy of the OSS artifact can be done by adopting an integrated package caching solution into your CI/CD infrastructure. All developers across your organization should standardize their consumption methods (using governed workflows) so that security policy can be enforced. <br /><br /> **Free Tools:** [VCPKG for C/C++ OSS](https://github.com/Microsoft/vcpkg), [Pulp](https://pulpproject.org/) <br /> **Paid Tools:** [Artifacts](https://docs.microsoft.com/en-us/azure/devops/artifacts/start-using-azure-artifacts?view=azure-devops), [GitHub Packages](https://github.com/features/packages), [Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal), [PackageCloud](https://packagecloud.io/) |  | [**ING-3**] Having a Deny List capability to block ingestion of vulnerable and malicious OSS components is a required defensive tool in incident response situations. Having an incident response team that can rapidly respond and update the deny list is also critical. <br /><br /> **Paid Tool:** [Nexus Firewall](https://www.sonatype.com/products/firewall) <br /><br /> [**ING-4**] Saving a local copy of the OSS source code <br /><br /> **Free Tool:** [Duplicating a repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository) | |
 | **Scan It -** for vulnerabilities and malware | [**SCA-1**] It is required to scan for known vulnerabilities of your dependencies. Choosing a tool that gets vulnerabilities from more places than just CVEs is important to ensure that you are being informed from across multiple vulnerability sources. <br /><br /> **Free Tool:** [GitHub Dependency Graph](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph) <br /> **Paid Tool:** [Snyk Open Source](https://snyk.io/product/open-source-security-management/), [Mend SCA](https://www.mend.io/sca/) <br /><br /> [**SCA-2**] In addition to scanning for vulnerabilities, OSS should be scanned for software licenses. <br /><br /> **Free Tool:** [ScanCode](https://github.com/nexB/scancode-toolkit) | [**SCA-3**] Scanning OSS to determine if it is end of life is crucial to ensure that you are not taking dependencies on OSS that is no longer updated. <br /><br /> **Free Tool**: [OpenSSF Scorecard](https://github.com/ossf/scorecard) | [**SCA-4**] Given the rise in malicious OSS packages over the years, it is critical that OSS be scanned for malware prior to consumption. <br /><br /> **Free Tool:** [Mend Supply Chain Defender](https://www.mend.io/mend-supply-chain-defender/), [OpenSSF Package Analysis](https://github.com/ossf/package-analysis) <br /> **Paid Tool:** [Nexus Firewall](https://www.sonatype.com/products/firewall), [Checkmarx SCA](https://checkmarx.com/resource/documents/en/34965-19105-preventing-supply-chain-attacks.html) <br /><br /> [**SCA-5**] Without doing proactive security analysis to look for zero-day vulnerabilities, there would be entire threat categories that would go unmitigated, such as back-doors. <br /><br /> **Free Tools:** [OSSGadget](https://github.com/microsoft/OSSGadget), [DevSkim](https://github.com/microsoft/DevSkim), [Attack Surface Analyzer](https://github.com/microsoft/AttackSurfaceAnalyzer), [Application Inspector](https://github.com/microsoft/ApplicationInspector), [CodeQL](https://codeql.github.com/), [OneFuzz](https://github.com/microsoft/onefuzz), [RESTler](https://github.com/microsoft/restler-fuzzer) <br /> **Paid Tool:** [Semgrep](https://semgrep.dev/) | |
 | **Inventory It -** OSS usage and deployment | [**INV-1**] Establishing an inventory of all developer OSS dependencies is critical when responding to an incident as an ingested malicious component would need to be deleted from the developer&#39;s desktop, the package caching solution, and the software/service that in production that consumed the package. Knowing which projects are using which OSS components and their versions across your enterprise is vital toward supporting rapid Incident Response. <br /><br /> **Free Tool**: [Component Detection](https://github.com/microsoft/component-detection), [SBOM Generator for 1st party code](https://github.com/microsoft/sbom-tool), [Syft](https://github.com/anchore/syft), [Tern](https://github.com/tern-tools/tern), [SCA tooling](https://github.com/bureado/awesome-software-supply-chain-security#sca-and-sbom) <br /> **Paid Tool**: [Dependency Graph w/ Insights](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/viewing-insights-for-your-organization#viewing-organization-dependency-insights) via [GHAS](https://docs.github.com/en/enterprise-server@3.4/get-started/learning-about-github/about-github-advanced-security) | [**INV-2**] Have an incident response plan that leverages your inventory and your deny list. <br /><br /> **Free Tool:** [Incident Response Reference Guide](https://www.microsoft.com/en-us/download/details.aspx?id=103148) | | |
 | **Update It** | [**UPD-1**] Update vulnerable OSS manually. | [**UPD-2**] Automating patching OSS dependencies to address known vulnerabilities in a timely manner. <br /><br />**Free Tool**: [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts), [Renovate](https://github.com/renovatebot/renovate) <br /><br /> [**UPD-3**] Display OSS vulnerabilities as comments in Pull Requests. <br /><br /> **Paid Tool**: [Dependency Review](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review) via [GHAS](https://docs.github.com/en/enterprise-server@3.4/get-started/learning-about-github/about-github-advanced-security) | | |
 | **Audit It -** provenance and consumption workflows | | [**AUD-2**] Audit that developers are consuming OSS through the approved ingestion method. You can search for binaries that are checked into the repo. <br /><br /> **Free Guide**: [Searching Code](https://docs.github.com/en/search-github/searching-on-github/searching-code) <br /><br /> [**AUD-3**] Validate integrity of the OSS that you consume into your build. <br /><br /> **Free Tool**: [NuGet CLI verify command](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-verify), | [**AUD-1**] Verify the provenance of all OSS components to ensure they come through the official supply chain. <br /><br /> **Paid Tool**: [Nexus Firewall](https://www.sonatype.com/products/firewall) | [**AUD-4**] Validate the SBOMs of OSS that you consume into your build. <br /><br /> **Free Tool**: [Community Attestation Service](https://cas.codenotary.com/) |
-| **Enforce It -** OSS consumption meets security policy | | [**ENF-1**] Securing the configuration of how build pipelines consume OSS components. <br /><br /> **Free Tools:** [NuGet Package Source Mapping](https://docs.microsoft.com/en-us/nuget/consume-packages/package-source-mapping), [Version pinning and Lock Files](https://azure.microsoft.com/mediahandler/files/resourcefiles/3-ways-to-mitigate-risk-using-private-package-feeds/3%20Ways%20to%20Mitigate%20Risk%20When%20Using%20Private%20Package%20Feeds%20-%20v1.0.pdf) | [**ENF-2**] Enforcing teams to only consume packages from a curated feed is the goal of this OSS SSC Framework. <br /><br /> **Paid Tool**: [Nexus Firewall](https://www.sonatype.com/products/firewall) | |
+| **Enforce It -** OSS consumption meets security policy | | [**ENF-1**] Securing the configuration of how build pipelines consume OSS components. <br /><br /> **Free Tools:** [NuGet Package Source Mapping](https://docs.microsoft.com/en-us/nuget/consume-packages/package-source-mapping), [Version pinning and Lock Files](https://azure.microsoft.com/mediahandler/files/resourcefiles/3-ways-to-mitigate-risk-using-private-package-feeds/3%20Ways%20to%20Mitigate%20Risk%20When%20Using%20Private%20Package%20Feeds%20-%20v1.0.pdf) | [**ENF-2**] Enforcing teams to only consume packages from a curated feed is the goal of this Framework. <br /><br /> **Paid Tool**: [Nexus Firewall](https://www.sonatype.com/products/firewall) | |
 | **Rebuild It -** from source | | | | [**REB-1**] Rebuilding from source in a trusted build environment removes the risk of consuming a package that may have been victim to a CCleaner/SolarWinds style build-time attack. <br /><br /> **Free Tools:** [Oryx](https://github.com/microsoft/oryx), [DotNet.ReproducibleBuilds](https://www.nuget.org/packages/DotNet.ReproducibleBuilds/), [Reproducible-Builds.org](https://reproducible-builds.org/), [OSS Reproducible](https://github.com/microsoft/OSSGadget/tree/main/src/oss-reproducible), [rebuilderd](https://github.com/kpcyrd/rebuilderd) <br /><br /> [**REB-2**] Digitally sign the OSS you rebuild. <br /><br /> **Tool:** [Notary](http://notaryproject.dev/), [SigStore](https://www.sigstore.dev/) <br /><br /> [**REB-3**] If you are rebuilding the OSS yourself, you can automate Software Bill of Material (SBOM) generation at build time. This helps capture the supply chain information for each package to enable you to better maintain auditability and blast radius assessments. <br /><br /> **Free Tool:** [SBOM Generator](https://github.com/microsoft/sbom-tool) on rebuilt 3rd party code <br /><br /> [**REB-4**] Digitally sign the SBOMs you produce. <br /><br /> **Free Tool:** [Notary](notaryproject.dev) |
 | **Fix It + Upstream** | | | | [**FIX-1**] In extreme cases, when a newly discovered vulnerability is so severe and you cannot wait for an upstream maintainer to implement a fix, you should implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer. <br /><br />**Free Tool**: [Follow confidential disclosure guidelines](https://docs.github.com/en/code-security/security-advisories/about-coordinated-disclosure-of-security-vulnerabilities) |
 
 # Conclusion
 
-The goal of this paper is to provide a _simple_ framework for the pragmatic inclusion of secure OSS consumption practices in the software development process. It outlines a series of discrete, non-proprietary security development activities that when joined with effective process automation and maturation levels represent the steps necessary for an organization to objectively claim compliance with the OSS SSC Framework as defined by the requirements identified in Level 3 of the OSS SSC Framework Maturity Model.
+The goal of this paper is to provide a _simple_ framework for the pragmatic inclusion of secure OSS consumption practices in the software development process. It outlines a series of discrete, non-proprietary security development activities that when joined with effective process automation and maturation levels represent the steps necessary for an organization to objectively claim compliance with the S2C2F as defined by the requirements identified in Level 3 of the S2C2F Maturity Model.
 
 # Appendix: Relation to SCITT
-The [Supply Chain Integrity, Transparency, and Trust](https://github.com/ietf-scitt) initiative, or SCITT, is a set of proposed industry standards for managing the compliance of goods and services across end-to-end supply chains. In the future, we expect teams to output "attestations of conformance" to the OSS SSC Framework requirements and store it in SCITT. The format of such attestations is to be determined.
+The [Supply Chain Integrity, Transparency, and Trust](https://github.com/ietf-scitt) initiative, or SCITT, is a set of proposed industry standards for managing the compliance of goods and services across end-to-end supply chains. In the future, we expect teams to output "attestations of conformance" to the S2C2F requirements and store it in SCITT. The format of such attestations is to be determined.
 
-# Appendix: Mapping OSS SSC Framework Requirements to Other Specifications
+# Appendix: Mapping Secure Supply Chain Consumption Framework Requirements to Other Specifications
 
-There are many other security frameworks, guides, and controls. This section maps the OSS SSC Framework requirements to other relevant specifications including NIST SP 800-161, NIST SP 800-218, CIS Software Supply Chain Security Guide, OWASP Software Component Verification Standard, SLSA, and the CNCF Software Supply Chain Best Practices.
+There are many other security frameworks, guides, and controls. This section maps the S2C2F Framework requirements to other relevant specifications including NIST SP 800-161, NIST SP 800-218, CIS Software Supply Chain Security Guide, OWASP Software Component Verification Standard, SLSA, and the CNCF Software Supply Chain Best Practices.
 
 | **Requirement ID** | **Requirement Title** | **References** |
 | --- | --- | --- |
