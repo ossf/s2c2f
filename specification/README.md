@@ -2,6 +2,8 @@
 
 > ⭐: **Click
 > _[here](Open_Source_Software_(OSS)_Secure_Supply_Chain_(SSC)_Framework.pdf)_ for the PDF of the specification**
+> 
+> :atom:: **Click _[here](./specification/framework.md)_ to view the specification in markdown**
 
 ## Updates to the specification
 
