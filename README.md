@@ -14,7 +14,7 @@ The S2C2F SIG is a group working within the OpenSSF's Supply Chain Integrity Wor
 ## 
 **Objective**
 
-The objective for the S2C2F SIG is to develop and continuosly improve upon a guide that provides the following:
+The objective for the S2C2F SIG is to develop and continuously improve upon a guide that provides the following:
 
 * A high-level solution-agnostic set of practices 
 * A detailed list of requirements 
