@@ -21,7 +21,7 @@ The community helps maintain these suggested methods of implementing the require
 | UPD-2 | Enable automated OSS updates | L2 | [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts) |
 | UPD-3 | Display OSS vulnerabilities as comments in Pull Requests (PRs) | L2 | [Dependency Review](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review) via [GHAS](https://docs.github.com/en/enterprise-server@3.4/get-started/learning-about-github/about-github-advanced-security) |
 | AUD-1 | Verify the provenance of your OSS | L3 | Repo it came from and commit hash from where it came. GitBOM? SBOM? |
-| AUD-2 | Audit that developers are consuming OSS through the approved ingestion method | L2 | An index methodology to identify the OSS code undeclared. Searching for Copyright and != <your company name> |
+| AUD-2 | Audit that developers are consuming OSS through the approved ingestion method | L2 | An index methodology to identify the OSS code undeclared. Searching for Copyright and != your company name |
 | AUD-3 | Validate integrity of the OSS that you consume into your build | L2 | This is usually performed by the language package client |
 | AUD-4 | Validate SBOMs of OSS that you consume into your build | L4 | |
 | ENF-1 | Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.) | L2 | https://azure.microsoft.com/en-us/resources/3-ways-to-mitigate-risk-using-private-package-feeds/ |
