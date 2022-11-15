@@ -21,7 +21,7 @@ The community helps maintain these suggested methods of implementing the require
 | UPD-2 | Enable automated OSS updates | L2 | [Renovate](https://github.com/renovatebot/renovate) |
 | UPD-3 | Display OSS vulnerabilities as comments in Pull Requests (PRs) | L2 | Leverage a [custom Scan Result Policy](https://docs.gitlab.com/ee/user/application_security/policies/scan-result-policies.html) that requires a reviewer to approve |
 | AUD-1 | Verify the provenance of your OSS | L3 | Repo it came from and commit hash from where it came. GitBOM? SBOM? |
-| AUD-2 | Audit that developers are consuming OSS through the approved ingestion method | L2 | An index methodology to identify the OSS code undeclared. Searching for Copyright and != <your company name> |
+| AUD-2 | Audit that developers are consuming OSS through the approved ingestion method | L2 | An index methodology to identify the OSS code undeclared. Searching for Copyright and != your company name |
 | AUD-3 | Validate integrity of the OSS that you consume into your build | L2 | This is usually performed by the language package client |
 | AUD-4 | Validate SBOMs of OSS that you consume into your build | L4 | |
 | ENF-1 | Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.) | L2 | https://azure.microsoft.com/en-us/resources/3-ways-to-mitigate-risk-using-private-package-feeds/ |
