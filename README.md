@@ -39,7 +39,6 @@ The objective for the S2C2F SIG is to develop and continuously improve upon a gu
 [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
 *   [S2C2F SIG Slack](https://openssf.slack.com/archives/C03THTH3RSM)
 *   [Supply Chain Integrity WG Slack](https://openssf.slack.com/archives/C01A1MA7A1K)
-*   If you wish to be come a maintainer
 
 ### 
 Quick Start
