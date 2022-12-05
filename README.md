@@ -39,6 +39,7 @@ The objective for the S2C2F SIG is to develop and continuously improve upon a gu
 [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
 *   [S2C2F SIG Slack](https://openssf.slack.com/archives/C03THTH3RSM)
 *   [Supply Chain Integrity WG Slack](https://openssf.slack.com/archives/C01A1MA7A1K)
+*   If you wish to be come a maintainer
 
 ### 
 Quick Start
@@ -57,8 +58,7 @@ Quick Start
 # 
 **Governance**
 
-[TODO: Update this link to your specific CHARTER.md file]
-The [CHARTER.md](https://github.com/ossf/project-template/blob/main/CHARTER.md) outlines the scope and governance of our group activities.
+The [GOVERNANCE.md](https://github.com/ossf/s2c2f/blob/main/governance/Governance.md) outlines the scope and governance of our group activities.
 
 
 *   Lead: Adrian Diglio (https://github.com/adriandiglio)
