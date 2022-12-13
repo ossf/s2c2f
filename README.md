@@ -8,7 +8,7 @@ The S2C2F SIG is a group working within the OpenSSF's Supply Chain Integrity Wor
 ## 
 **Motivation**
 
-[Background / use cases of the problem to be solved]
+OSS has become a critical aspect of any software supply chain. The S2C2F was designed based on known threats (i.e. tactics and techniques) used by adversaries to compromise OSS packages. By leveraging the framework, software development teams and organizations can securely consume OSS dependencies into the developer's workflow and enhance their OSS governance program to address threats specific to OSS consumption.
 
 
 ## 
@@ -43,10 +43,8 @@ The objective for the S2C2F SIG is to develop and continuously improve upon a gu
 ### 
 Quick Start
 
-*   Areas that need contributions
-*   Build information if applicable
-*   Where to file issues
-*   Etc.
+*   File issues in the [Issues page](https://github.com/ossf/s2c2f/issues)
+*   We are actively seeking contributions to our [Reference Implementations](./Reference_Implementation)
 
 ## 
 **Meeting times**
