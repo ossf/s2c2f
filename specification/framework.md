@@ -156,7 +156,7 @@ _I know where OSS artifacts are deployed in production._
 
 - A critical vulnerability is discovered in log4j, and the incident response team wants to know all the production services using log4j so they can appropriately staff and coordinate a response effort
 
-Once we have ingested and scanned the artifacts entering the software supply chain, we must ensure that we have an inventory whereeach artifact is used, by knowing in which services it is deployed and in which products it was released. This is required for incident response scenarios so that teams affected by a compromised package can be contacted so the appropriate actions can be taken to remove the affected package.
+Once we have ingested and scanned the artifacts entering the software supply chain, we must ensure that we have an inventory where each artifact is used, by knowing in which services it is deployed and in which products it was released. This is required for incident response scenarios so that teams affected by a compromised package can be contacted so the appropriate actions can be taken to remove the affected package.
 
 ### _Practice 4: Update It_
 
@@ -166,7 +166,7 @@ _I can deploy updated external artifacts soon after an update becomes publicly a
 
 - A team is currently using three different vulnerable NuGet packages and upgrading each package will be a substantial amount of work for the team. The team chooses to start by upgrading the most widely deployed package.
 
-Once we have ingested, scanned, and inventoried whereeach artifact is used, we can enable developers to _fix_ issues with artifacts that have already been used by knowing the supply chain processes that released the product/service that needs the fix.
+Once we have ingested, scanned, and inventoried where each artifact is used, we can enable developers to _fix_ issues with artifacts that have already been used by knowing the supply chain processes that released the product/service that needs the fix.
 
 Given the [SaltStack incident](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/), where a vulnerability was exploited within 3 days after announcement, every organization should aspire to patch vulnerable OSS packages in under 72 hours so that you patch faster than the adversary can operate. Using tools such as Dependabot to auto-generate Pull Requests (PRs) to update vulnerable OSS become critical capabilities for securing your supply chain.
 
