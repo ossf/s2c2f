@@ -104,6 +104,7 @@ For other sources of OSS threats, please see the following links:
 | OSS components reach end-of-support/end-of-life and therefore don&#39;t patch vulnerabilities | [log4net](https://github.com/apache/logging-log4net/) and [CVE-2018-1285](https://nvd.nist.gov/vuln/detail/CVE-2018-1285) | SCA-3 |
 | Vulnerability not fixed by upstream maintainer in desired timeframe | [Prototype Pollution in Lodash](https://hackerone.com/reports/712065) | FIX-1 |
 | Bad actor compromises a package manager account (e.g. npm) with no change to the corresponding open source repo and uploads a new malicious version of a package | [Ua-parser-js](https://www.truesec.com/hub/blog/uaparser-js-npm-package-supply-chain-attack-impact-and-response) | AUD-1 <br /> ENF-2 <br /> SCA-4 |
+| Bad actor uploads new malicious package and typosquats a well-known package author| [NuGet author impersonation](https://jfrog.com/blog/attackers-are-starting-to-target-net-developers-with-malicious-code-nuget-packages/) | AUD-5 |
 
 # Secure Supply Chain Consumption Framework Practices
 
@@ -312,6 +313,7 @@ Below is a table of the requirements mapped to the 8 different practices. Two of
 | | AUD-2 | L2 | Audit that developers are consuming OSS through the approved ingestion method | Detect when developers consume OSS that isn&#39;t detected by your inventory or scan tools |
 | | AUD-3 | L2 | Validate integrity of the OSS that you consume into your build | Validate digital signature or hash match for each component |
 | | AUD-4 | L4 | Validate SBOMs of OSS that you consume into your build | Validate SBOM for provenance data, dependencies, and its digital signature for SBOM integrity |
+| | AUD-5 | L3 | Validate the author of your OSS | Able to track that a given OSS package traces back to the expected maintainer(s) |
 | *Enforce It* | ENF-1 | L2 | Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.) | By using NuGet package source mapping, or a single upstream feed, or using version pinning and lock files, you can protect yourself from race conditions and Dependency Confusion attacks |
 | | ENF-2 | L3 | Enforce usage of a curated OSS feed that enhances the trust of your OSS | Curated OSS feeds can be systems that scan OSS for malware, validate claims-metadata about the component, or systems that enforce an allow/deny list. Developers should not be allowed to consume OSS outside of the curated OSS feed |
 | *Rebuild It* | REB-1 | L4 | Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built. <br /> **Prerequisite**: Sufficient build integrity measures are in place to establish a trusted build environment. | Mitigates against build-time attacks such as those seen on CCleaner and SolarWinds. Open Source developers could introduce scripts or code that aren&#39;t present in the repository into the build process or be building in a compromised environment. |
