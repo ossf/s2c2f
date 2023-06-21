@@ -93,7 +93,8 @@ For other sources of OSS threats, please see the following links:
 | **OSS Supply Chain Threat** | **Real Example** | **Mitigation via S2C2F Requirement** |
 | --- | --- | --- |
 | Accidental vulnerabilities in OSS code or Containers that we inherit | [SaltStack](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/) | UPD-2 <br /> UPD-3 |
-| Intentional vulnerabilities/backdoors added to an OSS code base | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | SCA-5 |
+| Intentional vulnerabilities/backdoors added to an OSS code base | [colors v1.4.1](https://snyk.io/blog/open-source-npm-packages-colors-faker/) | SCA-5 |
+| A malicious actor compromises a distribution mirror of a package | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | AUD-3 |
 | A malicious actor compromises a known good OSS component and adds malicious code into the repo | [ESLint incident](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes) | ING-3 <br /> ENF-2 <br /> SCA-4 |
 | A malicious actor creates a malicious package that is similar in name to a popular OSS component to trick developers into downloading it | [Typosquatting](https://www.securityweek.com/checkmarx-finds-threat-actor-fully-automating-npm-supply-chain-attacks) | AUD-1 <br /> ENF-2 <br /> SCA-4 |
 | A malicious actor compromises the compiler used by the OSS during build, adding backdoors | [CCleaner](https://blog.morphisec.com/morphisec-discovers-ccleaner-backdoor) | REB-1 |
