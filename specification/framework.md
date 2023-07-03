@@ -12,25 +12,35 @@ Licensed under [Community Specification License 1.0](https://github.com/Communit
 
 # Table of Contents
 
-* [Document Change Record](#document-change-record)
-* [Introduction](#introduction)
-* [About the Secure Supply Chain Consumption Framework](#about-the-secure-supply-chain-consumption-framework)
-* [What is the Secure Supply Chain Consumption Framework?](#what-is-the-secure-supply-chain-consumption-framework)
-* [Common OSS Supply Chain Threats](#common-oss-supply-chain-threats)
-* [Secure Supply Chain Consumption Framework Practices](#secure-supply-chain-consumption-framework-practices)
-  * [Target Audience](#target-audience)
-  * [Secure Supply Chain Consumption Framework Practices](#secure-supply-chain-consumption-framework-practices-1)
-* [The Secure Supply Chain Consumption Framework Implementation Guide](#the-secure-supply-chain-consumption-framework-implementation-guide)
-  * [Target Audience](#target-audience-1)
-  * [Secure Supply Chain Consumption Framework Levels of Maturity](#secure-supply-chain-consumption-framework-levels-of-maturity)
-  * [How to Assess Where Your Organization is in the Maturity Model?](#how-to-assess-where-your-organization-is-in-the-maturity-model)
-  * [Secure Supply Chain Consumption Framework Requirements](#secure-supply-chain-consumption-framework-requirements)
-  * [Secure Supply Chain Consumption Framework Tooling Availability](#secure-supply-chain-consumption-framework-tooling-availability)
-  * [Implementing the Secure Supply Chain Consumption Framework by Level](#implementing-the-secure-supply-chain-consumption-framework-by-level)
-* [Conclusion](#conclusion)
-* [Appendix: Relation to SCITT](#appendix-relation-to-scitt)
-* [Appendix: Mapping Secure Supply Chain Consumption Requirements to Other Specifications](#appendix-mapping-secure-supply-chain-consumption-framework-requirements-to-other-specifications)
-* [Appendix: References](#appendix-references)
+- [Secure Supply Chain Consumption Framework (S2C2F) Simplified Requirements](#secure-supply-chain-consumption-framework-s2c2f-simplified-requirements)
+- [Table of Contents](#table-of-contents)
+- [Document Change Record](#document-change-record)
+- [Introduction](#introduction)
+- [About the Secure Supply Chain Consumption Framework](#about-the-secure-supply-chain-consumption-framework)
+- [What is the Secure Supply Chain Consumption Framework?](#what-is-the-secure-supply-chain-consumption-framework)
+- [Common OSS Supply Chain Threats](#common-oss-supply-chain-threats)
+- [Secure Supply Chain Consumption Framework Practices](#secure-supply-chain-consumption-framework-practices)
+  - [Target Audience](#target-audience)
+  - [Secure Supply Chain Consumption Framework Practices](#secure-supply-chain-consumption-framework-practices-1)
+    - [_Practice 1: Ingest It_](#practice-1-ingest-it)
+    - [_Practice 2: Scan It_](#practice-2-scan-it)
+    - [_Practice 3: Inventory It_](#practice-3-inventory-it)
+    - [_Practice 4: Update It_](#practice-4-update-it)
+    - [_Practice 5: Audit It_](#practice-5-audit-it)
+    - [_Practice 6: Enforce It_](#practice-6-enforce-it)
+    - [_Practice 7: Rebuild It_](#practice-7-rebuild-it)
+    - [_Practice 8: Fix It + Upstream_](#practice-8-fix-it--upstream)
+- [The Secure Supply Chain Consumption Framework Implementation Guide](#the-secure-supply-chain-consumption-framework-implementation-guide)
+  - [Target Audience](#target-audience-1)
+  - [Secure Supply Chain Consumption Framework Levels of Maturity](#secure-supply-chain-consumption-framework-levels-of-maturity)
+  - [How to Assess Where Your Organization is in the Maturity Model?](#how-to-assess-where-your-organization-is-in-the-maturity-model)
+  - [Secure Supply Chain Consumption Framework Requirements](#secure-supply-chain-consumption-framework-requirements)
+  - [Secure Supply Chain Consumption Framework Tooling Availability](#secure-supply-chain-consumption-framework-tooling-availability)
+  - [Implementing the Secure Supply Chain Consumption Framework by Level](#implementing-the-secure-supply-chain-consumption-framework-by-level)
+- [Conclusion](#conclusion)
+- [Appendix: Relation to SCITT](#appendix-relation-to-scitt)
+- [Appendix: Mapping Secure Supply Chain Consumption Framework Requirements to Other Specifications](#appendix-mapping-secure-supply-chain-consumption-framework-requirements-to-other-specifications)
+- [Appendix: References](#appendix-references)
 
 # Document Change Record
 
@@ -263,26 +273,27 @@ Any maturity assessment should be done at the Organization level, so that it ass
 
 1. **Prepare for Assessment**. The first step is to understand the concepts behind the S2C2F so you feel comfortable engaging with developers and engineers to inquire about their existing tools, capabilities, and workflows. Next, identify a good sample size of diverse development teams from across the company to interview.
 2. **Perform the Assessment**. This is where you assess the organization&#39;s degree of maturity in software developer OSS management, security, and consumption processes. Here are a set of example questions that you can ask:
-    1. What type of OSS do you consume in your project?(e.g. native C/C++, NuGet, PyPI, npm, etc.)
-    2. How are you consuming your OSS into your project? (e.g. Using a Package Cache solution such as Azure Artifacts, commands such as curl or git clone, checking in the OSS into the repo, etc.)
-    3. Where do you consume your OSS from? (e.g. NuGet.org, npmjs.com, pypi.org, etc.)
-    4. Do you use a mix of internal-only packages and external packages? (_This can make you susceptible to Dependency Confusion attacks_)
-    5. Does your package source file (e.g. nuget.config, pom.xml, pip.conf, etc.) contain multiple feeds in its configuration? (_This can make you susceptible to Dependency Confusion attacks_)
-    6. Do you do anything custom with how you consume OSS? (e.g. consuming private forks of projects, putting Golang components into a NuGet, etc.)
-    7. Does your project use package lock files? (e.g. [packages.lock.json](https://devblogs.microsoft.com/nuget/enable-repeatable-package-restores-using-a-lock-file/) for NuGet, [package-lock.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json) for NPM, etc.)
-    8. How does your team inventory the use of OSS within your project? What tools are used?
-    9. How is your team made aware when a vulnerability exists in an OSS component? What tool is used?
-    10. At what point in the Software Development Lifecycle (SDLC) are OSS vulnerabilities surfaced? (e.g. after release? During build? As comments in PRs?)
-    11. How fast is OSS updated to address known vulnerabilities? (e.g. what is the Mean Time To Remediate)
-    12. Is updating OSS a manual or automated process? (e.g. using Dependabot)
-    13. Do you perform integration tests of how your software interfaces with the dependencies you have to validate that there are no breaking changes?
-    14. Do you scan OSS for malware prior to use?
-    15. Is your team able to block ingestion of a known-bad/malicious package?
-    16. Does your team clone open source code internally?
-    17. Does your team perform any sort of security reviews or scans of OSS before using?
-    18. Does your team contribute bug fixes back to the upstream OSS maintainer?
-    19. Do you rebuild any of the open source internally?
-    20. Do you have an incident response plan or playbook for reacting to an incident of consuming a malicious OSS component?
+    1. What tools do you use to evaluate the criticality of an open source project? (e.g. [criticality score](https://github.com/ossf/criticality_score))
+    2. What type of OSS do you consume in your project?(e.g. native C/C++, NuGet, PyPI, npm, etc.)
+    3. How are you consuming your OSS into your project? (e.g. Using a Package Cache solution such as Azure Artifacts, commands such as curl or git clone, checking in the OSS into the repo, etc.)
+    4. Where do you consume your OSS from? (e.g. NuGet.org, npmjs.com, pypi.org, etc.)
+    5. Do you use a mix of internal-only packages and external packages? (_This can make you susceptible to Dependency Confusion attacks_)
+    6. Does your package source file (e.g. nuget.config, pom.xml, pip.conf, etc.) contain multiple feeds in its configuration? (_This can make you susceptible to Dependency Confusion attacks_)
+    7. Do you do anything custom with how you consume OSS? (e.g. consuming private forks of projects, putting Golang components into a NuGet, etc.)
+    8. Does your project use package lock files? (e.g. [packages.lock.json](https://devblogs.microsoft.com/nuget/enable-repeatable-package-restores-using-a-lock-file/) for NuGet, [package-lock.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json) for NPM, etc.)
+    9. How does your team inventory the use of OSS within your project? What tools are used?
+    10. How is your team made aware when a vulnerability exists in an OSS component? What tool is used?
+    11. At what point in the Software Development Lifecycle (SDLC) are OSS vulnerabilities surfaced? (e.g. after release? During build? As comments in PRs?)
+    12. How fast is OSS updated to address known vulnerabilities? (e.g. what is the Mean Time To Remediate)
+    13. Is updating OSS a manual or automated process? (e.g. using Dependabot)
+    14. Do you perform integration tests of how your software interfaces with the dependencies you have to validate that there are no breaking changes?
+    15. Do you scan OSS for malware prior to use?
+    16. Is your team able to block ingestion of a known-bad/malicious package?
+    17. Does your team clone open source code internally?
+    18. Does your team perform any sort of security reviews or scans of OSS before using?
+    19. Does your team contribute bug fixes back to the upstream OSS maintainer?
+    20. Do you rebuild any of the open source internally?
+    21. Do you have an incident response plan or playbook for reacting to an incident of consuming a malicious OSS component?
 
 3. **Plan for Improvements.** Based on the interviews and answers you received from across your organization, you should be able to determine where you fall within the S2C2F Maturity Levels. It&#39;s possible that some teams may be ahead of others, so your focus should be on elevating all development teams to a specific Maturity Level. It&#39;s suggested that you accomplish this by driving standardization in both process and tooling across your software development teams for consuming OSS.
 
