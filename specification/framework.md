@@ -122,7 +122,7 @@ _I can ship any existing asset if external OSS sources are compromised or unavai
 
 - The Docker Hub repository becomes compromised
 - A team might be targeted by a dependency confusion attack
-- Azure itself is unavailable and we need access to OSS assets to restore it
+- Cloud service itself is unavailable and we need access to OSS assets to restore it
 - A package becomes permanently unavailable (i.e. left-pad is removed)
 
 The first step towards securing a software supply chain is ensuring you control all the artifact inputs. To satisfy this practice, there are two ingestion mechanisms: one for packaged artifacts and one for source code artifacts.
@@ -256,7 +256,7 @@ Depending on the projects and their criteria, you may have a mix of framework le
 
 **Level 3** – Proactively performing security analysis on your organization&#39;s most used OSS components and reducing risk to consume malicious packages are the themes of this maturity level. Scanning for malware in OSS before the package is downloaded is key toward preventing compromise. Then, to perform proactive security reviews of OSS requires that an organization can clone the source code to an internal location. Proactive security reviews help you look for the not-yet-discovered vulnerabilities, as well as identifying other threat categories such as detecting backdoors.
 
-**Level 4** – This level is considered aspirational in most cases. Rebuilding OSS on trusted build infrastructure is a defensive step to ensure that the OSS was not compromised at build time. Build time attacks are performed by the most sophisticated adversaries and do not occur very frequently. Thus, this level of maturity is what&#39;s required to defend against the most sophisticated adversaries. Additionally, rebuilding OSS has many subtle technical challenges such as what to name the package to prevent collisions with upstream? How to make sure all developers use the internal package instead of the external? Rebuilding also enables you to implement fixes (if needed) and deploy them at scale across your organization.
+**Level 4** – This level is considered aspirational in most cases as it is difficult to implement at scale. Rebuilding OSS on trusted build infrastructure is a defensive step to ensure that the OSS was not compromised at build time. Build time attacks are performed by the most sophisticated adversaries and may not occur very frequently. Thus, this level of maturity is what&#39;s required to defend against the most sophisticated adversaries. Additionally, rebuilding OSS has many subtle technical challenges such as what to name the package to prevent collisions with upstream? How to make sure all developers use the internal package instead of the external? Rebuilding also enables you to implement fixes (if needed) and deploy them at scale across your organization.
 
 ## How to Assess Where Your Organization is in the Maturity Model?
 
