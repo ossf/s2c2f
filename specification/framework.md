@@ -147,7 +147,7 @@ _I know if any OSS artifact in my pipeline has vulnerabilities or malware._
 - A team tries to use an OSS package that is known to steal bitcoins (i.e. the _event-stream_ scenario)
 - A team tries to use an OSS package with a backdoor
 
-Once we control all artifact inputs, we must scan all inputs to trust them. This trust is built using scanners that look for vulnerabilities, malware, malicious or anomalous behavior, extraneous code, and other known or previously undiscovered issues (i.e. zero-day vulnerabilities).
+Once we control all artifact inputs, we must scan all inputs to trust them. This trust is built using scanners that look for vulnerabilities, malware, malicious or anomalous behavior, extraneous code, end-of-life notices, and other known or previously undiscovered issues (i.e. zero-day vulnerabilities).
 
 ### _Practice 3: Inventory It_
 
@@ -190,7 +190,7 @@ _I can rely on secure and trusted OSS consumption within my organization._
 
 - A developer bypasses the official engineering pipeline to consume an OSS package with a known vulnerability
 
-All OSS artifacts must be consumed from trusted sources and through the official OSS consumption channels. The next step is to enable enforcement of the supply chain so that all artifacts that in any way impact a production service/release must come through the full supply chain. An example of enforcement is to reroute DNS traffic or configure builds to break if they try to consume OSS from untrusted sources.
+All OSS artifacts must be consumed from organization-defined approved sources and through the official OSS consumption channels. The next step is to enable enforcement of the supply chain so that all artifacts that in any way impact a production service/release must come through the full supply chain. An example of enforcement is to reroute DNS traffic or configure builds to break if they try to consume OSS from untrusted sources.
 
 ### _Practice 7: Rebuild It_
 
