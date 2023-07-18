@@ -103,7 +103,8 @@ For other sources of OSS threats, please see the following links:
 | **OSS Supply Chain Threat** | **Real Example** | **Mitigation via S2C2F Requirement** |
 | --- | --- | --- |
 | Accidental vulnerabilities in OSS code or Containers that we inherit | [SaltStack](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/) | UPD-2 <br /> UPD-3 |
-| Intentional vulnerabilities/backdoors added to an OSS code base | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | SCA-5 |
+| Intentional vulnerabilities/backdoors added to an OSS code base | [colors v1.4.1](https://snyk.io/blog/open-source-npm-packages-colors-faker/) | SCA-5 |
+| A malicious actor compromises a distribution mirror of a package | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | AUD-3 |
 | A malicious actor compromises a known good OSS component and adds malicious code into the repo | [ESLint incident](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes) | ING-3 <br /> ENF-2 <br /> SCA-4 |
 | A malicious actor creates a malicious package that is similar in name to a popular OSS component to trick developers into downloading it | [Typosquatting](https://www.securityweek.com/checkmarx-finds-threat-actor-fully-automating-npm-supply-chain-attacks) | AUD-1 <br /> ENF-2 <br /> SCA-4 |
 | A malicious actor compromises the compiler used by the OSS during build, adding backdoors | [CCleaner](https://blog.morphisec.com/morphisec-discovers-ccleaner-backdoor) | REB-1 |
@@ -131,7 +132,7 @@ _I can ship any existing asset if external OSS sources are compromised or unavai
 
 - The Docker Hub repository becomes compromised
 - A team might be targeted by a dependency confusion attack
-- Azure itself is unavailable and we need access to OSS assets to restore it
+- Cloud service itself is unavailable and we need access to OSS assets to restore it
 - A package becomes permanently unavailable (i.e. left-pad is removed)
 
 The first step towards securing a software supply chain is ensuring you control all the artifact inputs. To satisfy this practice, there are two ingestion mechanisms: one for packaged artifacts and one for source code artifacts.
@@ -156,7 +157,7 @@ _I know if any OSS artifact in my pipeline has vulnerabilities or malware._
 - A team tries to use an OSS package that is known to steal bitcoins (i.e. the _event-stream_ scenario)
 - A team tries to use an OSS package with a backdoor
 
-Once we control all artifact inputs, we must scan all inputs to trust them. This trust is built using scanners that look for vulnerabilities, malware, malicious or anomalous behavior, extraneous code, and other known or previously undiscovered issues (i.e. zero-day vulnerabilities).
+Once we control all artifact inputs, we must scan all inputs to trust them. This trust is built using scanners that look for vulnerabilities, malware, malicious or anomalous behavior, extraneous code, end-of-life notices, and other known or previously undiscovered issues (i.e. zero-day vulnerabilities).
 
 ### _Practice 3: Inventory It_
 
@@ -199,7 +200,7 @@ _I can rely on secure and trusted OSS consumption within my organization._
 
 - A developer bypasses the official engineering pipeline to consume an OSS package with a known vulnerability
 
-All OSS artifacts must be consumed from trusted sources and through the official OSS consumption channels. The next step is to enable enforcement of the supply chain so that all artifacts that in any way impact a production service/release must come through the full supply chain. An example of enforcement is to reroute DNS traffic or configure builds to break if they try to consume OSS from untrusted sources.
+All OSS artifacts must be consumed from organization-defined approved sources and through the official OSS consumption channels. The next step is to enable enforcement of the supply chain so that all artifacts that in any way impact a production service/release must come through the full supply chain. An example of enforcement is to reroute DNS traffic or configure builds to break if they try to consume OSS from untrusted sources.
 
 ### _Practice 7: Rebuild It_
 
@@ -265,7 +266,7 @@ Depending on the projects and their criteria, you may have a mix of framework le
 
 **Level 3** – Proactively performing security analysis on your organization&#39;s most used OSS components and reducing risk to consume malicious packages are the themes of this maturity level. Scanning for malware in OSS before the package is downloaded is key toward preventing compromise. Then, to perform proactive security reviews of OSS requires that an organization can clone the source code to an internal location. Proactive security reviews help you look for the not-yet-discovered vulnerabilities, as well as identifying other threat categories such as detecting backdoors.
 
-**Level 4** – This level is considered aspirational in most cases. Rebuilding OSS on trusted build infrastructure is a defensive step to ensure that the OSS was not compromised at build time. Build time attacks are performed by the most sophisticated adversaries and do not occur very frequently. Thus, this level of maturity is what&#39;s required to defend against the most sophisticated adversaries. Additionally, rebuilding OSS has many subtle technical challenges such as what to name the package to prevent collisions with upstream? How to make sure all developers use the internal package instead of the external? Rebuilding also enables you to implement fixes (if needed) and deploy them at scale across your organization.
+**Level 4** – This level is considered aspirational in most cases as it is difficult to implement at scale. Rebuilding OSS on trusted build infrastructure is a defensive step to ensure that the OSS was not compromised at build time. Build time attacks are performed by the most sophisticated adversaries and may not occur very frequently. Thus, this level of maturity is what&#39;s required to defend against the most sophisticated adversaries. Additionally, rebuilding OSS has many subtle technical challenges such as what to name the package to prevent collisions with upstream? How to make sure all developers use the internal package instead of the external? Rebuilding also enables you to implement fixes (if needed) and deploy them at scale across your organization.
 
 ## How to Assess Where Your Organization is in the Maturity Model?
 
@@ -385,13 +386,13 @@ There are many other security frameworks, guides, and controls. This section map
 | UPD-1 | Update vulnerable OSS manually | |
 | UPD-2 | Enable automated OSS updates | |
 | UPD-3 | Display OSS vulnerabilities as comments in Pull Requests (PRs) | |
-| AUD-1 | Verify the provenance of your OSS | **CIS SSC SG** : 3.2.4 <br /> **OWASP SCVS:** 1.10, 6.1 <br /> **SLSA:** Provenance – Dependencies complete |
+| AUD-1 | Verify the provenance of your OSS | **CIS SSC SG** : 3.2.4 <br /> **OWASP SCVS:** 1.10, 6.1 <br /> **SLSA v1.0:** Producing artifacts – Distribute provenance |
 | AUD-2 | Audit that developers are consuming OSS through the approved ingestion method | **CIS SSC SG** : 4.3.3 |
 | AUD-3 | Validate integrity of the OSS that you consume into your build | **CIS SSC SG** : 2.4.3 <br /> **OWASP SCVS:** 4.12 <br /> **CNCF SSC:** Verify third party artefacts and open source libraries |
 | AUD-4 | Validate SBOMs of OSS that you consume into your build | **CNCF SSC:** Require SBOM from third party supplier |
 | ENF-1 | Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.) | **SP800218** : PO.5.2 <br /> **CIS SSC SG** : 2.4.2, 3.1.7, 4.3.4, 4.4.2 |
 | ENF-2 | Enforce usage of a curated OSS feed that enhances the trust of your OSS | **SP800218** : PO.5.2 <br /> **CIS SSC SG** : 2.4.3, 3.1.1, 3.1.3 |
-| REB-1 | Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built | **CIS SSC SG** : 2.4.4 <br /> **SLSA:** Build - Reproducible |
+| REB-1 | Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built | **CIS SSC SG** : 2.4.4 |
 | REB-2 | Digitally sign the OSS you rebuild | **SP800218** : PS.2.1 |
 | REB-3 | Generate SBOMs for OSS that you rebuild | **SP800218** : PS.3.2 <br /> **SP800161** : SA-8, SR-3, SR-4 <br /> **CIS SSC SG** : 2.4.5 <br /> **OWASP SCVS:** 1.4, 1.7 <br /> **CNCF SSC:** Generate an immutable SBOM of the code |
 | REB-4 | Digitally sign the SBOMs you produce | **CIS SSC SG** : 2.4.6 |
