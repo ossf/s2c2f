@@ -38,7 +38,7 @@ To learn more, the S2C2F FAQ is available [here](./FAQ.md).
 ### Quick Start
 
 *   File issues in the [Issues page](https://github.com/ossf/s2c2f/issues)
-*   We are actively seeking contributions to our [Reference Implementations](./Reference_Implementation)
+*   We are actively seeking contributions to our [Reference Implementations](./Reference_implementation/README.md)
 
 ### Meeting times
 
