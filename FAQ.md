@@ -58,4 +58,4 @@ Including references to known vulnerabilities in pull requests prevents vulnerab
 
 ### Is the ENF-1 requirement about properly configuring the allowed repositories into package managers?
 
-ENF-1 is about hardening package manager configuration to prevent mix-and-match attacks through dependencies being sourced from multiple registries or otherwise not using the expected version. How to do it varies by environment (OSS developer, indie, enterprise) and ecosystem (Python, npm, etc).
+ENF-1 is about hardening package source file configuration to prevent mix-and-match attacks through dependencies being sourced from multiple registries or otherwise not using the expected version. How to do it varies by environment (OSS developer, indie, enterprise) and ecosystem (Python, npm, etc).
