@@ -51,8 +51,8 @@ Scanning for end of support entails scanning for all of the above to understand 
 
 ### Is the UPD-3 requirement to add a reference to the known vulnerabilities in the pull requests intending to fix these vulnerabilities? What is the prerequisite that two-person PR reviews are enforced?
 
-Including references to known vulnerabilities in pull requests prevents vulnerabilities from being unknowingly introduced earlier in the DevOps lifecycle. This requirement should be exercised when a developer adds new dependencies at pull request time. The prerequisite of "two-person PR reviews" means that manual pull request reviews are conducted by at least one reviewer separate from the person the developed the code.
+Including references to known vulnerabilities in pull requests prevents vulnerabilities from being unknowingly introduced earlier in the DevOps lifecycle. This requirement should be exercised when a developer adds new dependencies at pull request time. The prerequisite of "two-person PR reviews" means that manual pull request reviews are conducted by at least one reviewer separate from the person the developed the code so that they see and remediate the vulnerabilities prior to approving and merging the pull request.
 
 ### Is the ENF-1 requirement about properly configuring the allowed repositories into package managers?
 
-By using either a single upstream feed, or a package source mapping (e.g. Nuget)...
+ENF-1 is about hardening package manager configuration to prevent mix-and-match attacks through dependencies being sourced from multiple registries or otherwise not using the expected versio. How to do it varies by environment (OSS developer, indie, enterprise) and ecosystem (Python, npm, etc).
