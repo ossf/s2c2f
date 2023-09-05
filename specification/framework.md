@@ -306,8 +306,8 @@ Below is a table of the requirements mapped to the 8 different practices. Two of
 
 | **Practice** | **Requirement ID** | **Maturity Level** | **Requirement Title** | **Benefit** |
 | --- | --- | --- | --- | --- |
-| *Ingest it* | ING-1 | L1 | Use package managers trusted by your organization | Your organization benefits from the inherent security provided by the package manager |
-| | ING-2 | L1 | Use an OSS binary repository manager solution | Caches a local copy of the OSS artifact and protects against [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) incidents, enabling developers to continue to build even if upstream resources are unavailable |
+| *Ingest it* | ING-1 | L1 | Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.) | Your organization benefits from the inherent security provided by the package manager |
+| | ING-2 | L1 | Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.) | Caches a local copy of the OSS artifact and protects against [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) incidents, enabling developers to continue to build even if upstream resources are unavailable |
 | | ING-3 | L3 | Have a Deny List capability to block known malicious OSS from being consumed | Prevents ingestion of known malware by blocking ingestion as soon as a critically vulnerable OSS component is identified, such as [colors v 1.4.1](https://security.snyk.io/vuln/SNYK-JS-COLORS-2331906), or if an OSS component is deemed malicious |
 | | ING-4 | L3 | Mirror a copy of all OSS source code to an internal location | Business Continuity and Disaster Recovery (BCDR) scenarios. Also enables proactive security scanning, fix it scenarios, and ability to rebuild OSS in a trusted build environment. |
 | *Scan It* | SCA-1 | L1 | Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.) | Able to update OSS to reduce risks |
