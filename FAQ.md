@@ -2,7 +2,7 @@
 
 Below are some frequently asked questions regarding the Framework. If you have further questions, feel free to start a discussion by opening an [Issue](https://github.com/ossf/s2c2f/issues).
 
-- [What is the Secure Supply Chain Consumption Framework (S2C2F)?](#what-is-the-secure-supply-chain-consumption-framework-S2C2F)
+- [What is the Secure Supply Chain Consumption Framework (S2C2F)?](#what-is-the-secure-supply-chain-consumption-framework-s2c2f)
 - [What does this Framework focus on securing?](#what-does-this-framework-focus-on-securing)
 - [How do you define OSS?](#how-do-you-define-OSS)
 - [Why should I use the S2C2F?](#why-should-i-use-the-s2c2f)
@@ -10,6 +10,9 @@ Below are some frequently asked questions regarding the Framework. If you have f
 - [Why is this Framework focused on open source?](#why-is-this-framework-focused-on-open-source)
 - [How does this Framework relate to other supply chain security specifications like SLSA?](#how-does-this-framework-relate-to-other-supply-chain-security-specifications-like-slsa)
 - [What is the difference between the SCA-5 and FIX-1 requirements?](#what-is-the-difference-between-the-SCA-5-and-FIX-1-requirements)
+- [Is the SCA-3 requirement only about the end of an open source project, or is it also about the end of support of a branch in the project used by a product?](#is-the-sca-3-requirement-only-about-the-end-of-an-open-source-project-or-is-it-also-about-the-end-of-support-of-a-branch-in-the-project-used-by-a-product)
+- [Is the UPD-3 requirement to add a reference to the known vulnerabilities in the pull requests intending to fix these vulnerabilities? What is the "Two-person PR reviews are enforced" prerequisite?](#is-the-upd-3-requirement-to-add-a-reference-to-the-known-vulnerabilities-in-the-pull-requests-intending-to-fix-these-vulnerabilities-what-is-the-two-person-pr-reviews-are-enforced-prerequisite)
+- [Is the ENF-1 requirement about properly configuring the allowed repositories into package managers?](#is-the-enf-1-requirement-about-properly-configuring-the-allowed-repositories-into-package-managers)
 
 ## About the framework
 
@@ -44,3 +47,15 @@ SCA-5 requirement is simply that your organization is performing proactive secur
 `FIX-1: Implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer - To be used only in extreme circumstances when the risk is too great and to be used temporarily until the upstream maintainer issues a fix.`
 
 FIX-1 is when you come across a zero-day vulnerability that is so severe that your organization feels that they can't wait for the upstream maintainer to issue a public fix. The only other action would be to implement a private fix (just for your team/organization) while you continue trying to partner with the upstream maintainer on a public fix. A private fix should always be considered a temporary risk reduction measure for extreme circumstances, as your team/organization should plan to convert to the public fix once available.
+
+### Is the SCA-3 requirement only about the end of an open source project, or is it also about the end of support of a branch in the project used by a product?
+
+Scanning for end of support entails scanning for all of the above to understand if anything consumed is no longer supported. Consumers of open source may want to know if a product is no longer supported or even if a specific version range is unsupported. The point is to identify if anything consumed is no longer supported. It is vital to know if any dependency is unsupported as this can create gaps in security since dependencies won't get patched and attackers can take advantage of the lack of support.
+
+### Is the UPD-3 requirement to add a reference to the known vulnerabilities in the pull requests intending to fix these vulnerabilities? What is the "Two-person PR reviews are enforced" prerequisite?
+
+Including references to known vulnerabilities in pull requests prevents vulnerabilities from being unknowingly introduced earlier in the DevOps lifecycle. This requirement should be exercised when a developer adds new dependencies at pull request time. The prerequisite of "two-person PR reviews" means that manual pull request reviews are conducted by at least one reviewer separate from the person the developed the code so that they see and remediate the vulnerabilities prior to approving and merging the pull request.
+
+### Is the ENF-1 requirement about properly configuring the allowed repositories into package managers?
+
+ENF-1 is about hardening package source file configuration to prevent mix-and-match attacks through dependencies being sourced from multiple registries or otherwise not using the expected version. How to do it varies by environment (OSS developer, indie, enterprise) and ecosystem (Python, npm, etc).
