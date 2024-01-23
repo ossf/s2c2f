@@ -73,7 +73,7 @@ Inspired by [ANSI’s Essential Requirements for Due Process](https://share.ansi
 
 **4.1. Draft.** During the specification development process, Participants may submit issues and pull requests to a S2C2F specification repository. Pull requests will be merged upon Approval of the applicable Maintainers. Each updated version of the specification following the merging of a pull request will be considered a "Draft Specification".
 
-**4.2.** Project Approval. Upon the determination by the applicable workstream that it has achieved the objectives for its specification as described in the Scope, the applicable Maintainers will Approve that Draft Specification as a candidate for "Approved Specification" status. The following process will then be used:
+**4.2. Project Approval.** Upon the determination by the applicable workstream that it has achieved the objectives for its specification as described in the Scope, the applicable Maintainers will Approve that Draft Specification as a candidate for "Approved Specification" status. The following process will then be used:
 
 <li> The Maintainers will distribute that version of the Draft Specification to the Project's primary mailing list.
 <li> The Maintainers will state in the distribution that the Draft Specification is a candidate for "Approved Specification" status, and will announce the start of a two-week review period (the "Review Period").
