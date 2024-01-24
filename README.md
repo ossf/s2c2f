@@ -52,6 +52,10 @@ The [GOVERNANCE.md](https://github.com/ossf/s2c2f/blob/main/governance/Governanc
 *   Lead: Adrian Diglio (https://github.com/adriandiglio)
 *   Co-Lead: Jay White (https://github.com/camaleon2016)
 
+## Steering Committee 
+- [Jay White, Microsoft](https://github.com/camaleon2016)
+- [Adrian Diglio, Microsoft](https://github.com/adriandiglio)
+
 ## SIG Maintainers
 - [Jay White, Microsoft](https://github.com/camaleon2016)
 - [Adrian Diglio, Microsoft](https://github.com/adriandiglio)
