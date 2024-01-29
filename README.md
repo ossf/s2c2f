@@ -60,6 +60,7 @@ The [GOVERNANCE.md](https://github.com/ossf/s2c2f/blob/main/governance/Governanc
 - [Jay White, Microsoft](https://github.com/camaleon2016)
 - [Adrian Diglio, Microsoft](https://github.com/adriandiglio)
 - [Jasmine Wang, Microsoft](https://github.com/jasminewang0)
+- [Tom Bedford, Bloomberg](https://github.com/tombedfordgit)
 
 
 ## SIG Collaborators
