@@ -70,7 +70,7 @@ The guidance provided in this paper is targeted toward organizations that do sof
 
 # About the Secure Supply Chain Consumption Framework
 
-The Secure Supply Chain Consumption Framework (S2C2F) is a security assurance and risk reduction process that is focused on securing how developers consume open source software. As a Microsoft-wide initiative since 2019, the S2C2F provides security guidance and tools throughout the developer inner-loop and outer-loop processes that have played a critical role in defending and preventing supply chain attacks through consumption of open source software across Microsoft. Using a threat-based risk-reduction approach, the goals of the S2C2F are to:
+The Secure Supply Chain Consumption Framework (S2C2F) is a security assurance and risk reduction process that is focused on securing how developers consume open source software. As an initiative widely used across Microsoft since 2019, the S2C2F provides security guidance and tools throughout the developer inner-loop and outer-loop processes that have played a critical role in defending and preventing supply chain attacks through consumption of open source software. Using a threat-based risk-reduction approach, the goals of the S2C2F are to:
 
 1. Provide a strong OSS governance program
 2. Improve the Mean Time To Remediate (MTTR) for resolving known vulnerabilities in OSS
