@@ -1,6 +1,6 @@
 # Secure Supply Chain Consumption Framework (S2C2F) Project
 
-<img alt="secure package icon" src="images/secure-package-icon.png" width=15%>
+<img alt="Inspector Gadget Goose" src="images/image_from_ios_720.jpg" width=25%>
 
 The S2C2F Project is a group working within the OpenSSF's Supply Chain Integrity Working Group formed to further develop and continuously improve the S2C2F guide which outlines and defines how to securely consume Open Source Software (OSS) dependencies into the developer’s workflow. This paper is split into two parts: a solution-agonistic set of practices and a maturity model-based implementation guide. The Framework is targeted toward organizations that do software development, that take a dependency on open source software, and that seek to improve the security of their software supply chain.
 
