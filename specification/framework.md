@@ -334,13 +334,10 @@ Below is a table of the requirements mapped to the 8 different practices. Two of
 
 ## Secure Supply Chain Consumption Framework Tooling Availability
 
-**Comprehensive Tooling available in v1.0 of the S2C2F:**
+**Tooling referenced within the S2C2F:**
 
-The guidance and tooling in this document are a combination of paid and free tools from both Microsoft and across the industry.
+The implementation guidance and tooling in this document are a combination of paid and free tools across the industry. It is not a comprehensive list, but is included to provide examples of the type of solutions that help address the S2C2F requirements. Before jumping to any solutions, you should first understand the needs of your team/organization (such as what languages they use) and then assess multiple tool's capabilities from across the industry against your needs (such as ensuring the solution supports your top-used languages). 
 
-**Tooling available in future iterations of the S2C2F:**
-
-In the future, Microsoft plans on releasing more tools to help organizations secure their software supply chain end-to-end.
 
 ## Implementing the Secure Supply Chain Consumption Framework by Level
 
