@@ -100,21 +100,22 @@ For other sources of OSS threats, please see the following links:
 - [Taxonomy of Attacks on Open-Source Software Supply Chains](https://arxiv.org/pdf/2204.04008.pdf)
 - [Software Supply Chain Threats](https://cloud.google.com/software-supply-chain-security/docs/attack-vectors)
 
-| **OSS Supply Chain Threat** | **Real Example** | **Mitigation via S2C2F Requirement** |
-| --- | --- | --- |
-| Accidental vulnerabilities in OSS code or Containers that we inherit | [SaltStack](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/) | UPD-2 <br /> UPD-3 |
-| Intentional vulnerabilities/backdoors added to an OSS code base | [colors v1.4.1](https://snyk.io/blog/open-source-npm-packages-colors-faker/) | SCA-5 |
-| A malicious actor compromises a distribution mirror of a package | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | AUD-3 |
-| A malicious actor compromises a known good OSS component and adds malicious code into the repo | [ESLint incident](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes) | ING-3 <br /> ENF-2 <br /> SCA-4 |
-| A malicious actor creates a malicious package that is similar in name to a popular OSS component to trick developers into downloading it | [Typosquatting](https://www.securityweek.com/checkmarx-finds-threat-actor-fully-automating-npm-supply-chain-attacks) | AUD-1 <br /> ENF-2 <br /> SCA-4 |
-| A malicious actor compromises the compiler used by the OSS during build, adding backdoors | [CCleaner](https://blog.morphisec.com/morphisec-discovers-ccleaner-backdoor) | REB-1 |
-| Dependency confusion, package substitution attacks | [Dependency Confusion](https://www.bleepingcomputer.com/news/security/copycats-imitate-novel-supply-chain-attack-that-hit-tech-giants/) | ENF-1 <br /> ENF-2 |
-| An OSS component adds new dependencies that are malicious | [Event-Stream incident](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident) | SCA-4 <br /> ENF-2 |
-| The integrity of an OSS package is tampered after build, but before consumption | [How to tamper with Electron apps](https://github.com/jonmest/How-To-Tamper-With-Any-Electron-Application) | AUD-3 <br /> AUD-4 |
-| Upstream source can be removed or taken down which can then break builds that depend on that OSS component or container | [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) | ING-2 <br /> ING-4 |
-| OSS components reach end-of-support/end-of-life and therefore don&#39;t patch vulnerabilities | [log4net](https://github.com/apache/logging-log4net/) and [CVE-2018-1285](https://nvd.nist.gov/vuln/detail/CVE-2018-1285) | SCA-3 |
-| Vulnerability not fixed by upstream maintainer in desired timeframe | [Prototype Pollution in Lodash](https://hackerone.com/reports/712065) | FIX-1 |
-| Bad actor compromises a package manager account (e.g. npm) with no change to the corresponding open source repo and uploads a new malicious version of a package | [Ua-parser-js](https://www.truesec.com/hub/blog/uaparser-js-npm-package-supply-chain-attack-impact-and-response) | AUD-1 <br /> ENF-2 <br /> SCA-4 |
+| **OSS Supply Chain Threat** | **Real Example** | **Mitigation via S2C2F Requirement** | **Mitigation via S2C2F Maturity Level** |
+| --- | --- | --- | --- |
+| Accidental vulnerabilities in OSS code or Containers that we inherit | [SaltStack](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/) | UPD-2 <br /> UPD-3 | L2 |
+| Intentional vulnerabilities/backdoors added to an OSS code base | [colors v1.4.1](https://snyk.io/blog/open-source-npm-packages-colors-faker/) | SCA-5 | L3 |
+| A malicious actor compromises a distribution mirror of a package | [phpMyAdmin](https://arstechnica.com/information-technology/2012/09/questions-abound-as-malicious-phpmyadmin-backdoor-found-on-sourceforge-site/) | AUD-3 | L2 |
+| A malicious actor compromises a known good OSS component and adds malicious code into the repo | [ESLint incident](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes) | ING-3 <br /> ENF-2 <br /> SCA-4 | L3 |
+| A malicious actor creates a malicious package that is similar in name to a popular OSS component to trick developers into downloading it | [Typosquatting](https://www.securityweek.com/checkmarx-finds-threat-actor-fully-automating-npm-supply-chain-attacks) | AUD-1 <br /> ENF-2 <br /> SCA-4 | L3 |
+| A malicious actor compromises the compiler used by the OSS during build, adding backdoors | [CCleaner](https://blog.morphisec.com/morphisec-discovers-ccleaner-backdoor) | REB-1 | L4 |
+| Dependency confusion, package substitution attacks | [Dependency Confusion](https://www.bleepingcomputer.com/news/security/copycats-imitate-novel-supply-chain-attack-that-hit-tech-giants/) | ENF-1 <br /> ENF-2 | L3 |
+| An OSS component adds new dependencies that are malicious | [Event-Stream incident](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident) | SCA-4 <br /> ENF-2 | L3 |
+| The integrity of an OSS package is tampered after build, but before consumption | [How to tamper with Electron apps](https://github.com/jonmest/How-To-Tamper-With-Any-Electron-Application) | AUD-3 <br /> AUD-4 | L4 |
+| Upstream source can be removed or taken down which can then break builds that depend on that OSS component or container | [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) | ING-2 <br /> ING-4 | L3 |
+| OSS components reach end-of-support/end-of-life and therefore don&#39;t patch vulnerabilities | [log4net](https://github.com/apache/logging-log4net/) and [CVE-2018-1285](https://nvd.nist.gov/vuln/detail/CVE-2018-1285) | SCA-3 | L2 |
+| Vulnerability not fixed by upstream maintainer in desired timeframe | [Prototype Pollution in Lodash](https://hackerone.com/reports/712065) | FIX-1 | L4 |
+| Bad actor compromises a package manager account (e.g. npm) with no change to the corresponding open source repo and uploads a new malicious version of a package | [Ua-parser-js](https://www.truesec.com/hub/blog/uaparser-js-npm-package-supply-chain-attack-impact-and-response) | AUD-1 <br /> ENF-2 <br /> SCA-4 | L3 |
+| Upstream source code re-licensed which may pose legal risk or prevent practical upgrade paths when licenses are incompatible | [node-ipc license change to DBAD](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/) | SCA-2 | L1 |
 
 # Secure Supply Chain Consumption Framework Practices
 
