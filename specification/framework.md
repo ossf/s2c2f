@@ -115,7 +115,7 @@ For other sources of OSS threats, please see the following links:
 | OSS components reach end-of-support/end-of-life and therefore don&#39;t patch vulnerabilities | [log4net](https://github.com/apache/logging-log4net/) and [CVE-2018-1285](https://nvd.nist.gov/vuln/detail/CVE-2018-1285) | SCA-3 | L2 |
 | Vulnerability not fixed by upstream maintainer in desired timeframe | [Prototype Pollution in Lodash](https://hackerone.com/reports/712065) | FIX-1 | L4 |
 | Bad actor compromises a package manager account (e.g. npm) with no change to the corresponding open source repo and uploads a new malicious version of a package | [Ua-parser-js](https://www.truesec.com/hub/blog/uaparser-js-npm-package-supply-chain-attack-impact-and-response) | AUD-1 <br /> ENF-2 <br /> SCA-4 | L3 |
-| Upstream source code re-licensed presenting different compliance obligations to users which may prevent practical upgrade paths when licenses are incompatible | [node-ipc license change to DBAD](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/) | SCA-2 | L1 |
+| Upstream source code re-licensed which may pose legal risk or prevent practical upgrade paths when licenses are incompatible | [node-ipc license change to DBAD](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/) | SCA-2 | L1 |
 
 # Secure Supply Chain Consumption Framework Practices
 
