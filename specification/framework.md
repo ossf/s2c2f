@@ -265,7 +265,7 @@ Depending on the projects and their criteria, you may have a mix of framework le
 
 **Level 2** – This maturity level focuses on shifting security further left by improving ingestion configuration security, decreasing MTTR to patch OSS vulnerabilities, and responding to incidents. The SaltStack vulnerability in 2020 showed us that adversaries were able to start exploiting CVE-2020-11651 within 3 days of it being announced. Even though a patch was available, organizations were not able to patch their systems fast enough. Thus, a key component of this level leverages automation to help developers keep their OSS hygiene healthy and updated. The ideal goal is for organizations to be able to patch faster than attackers can operate.
 
-**Level 3** – Proactively performing security analysis on your organization&#39;s most used OSS components and reducing risk to consume malicious packages are the themes of this maturity level. Scanning for malware in OSS before the package is downloaded is key toward preventing compromise. Then, to perform proactive security reviews of OSS requires that an organization can clone the source code to an internal location. Proactive security reviews help you look for the not-yet-discovered vulnerabilities, as well as identifying other threat categories such as detecting backdoors.
+**Level 3** – Proactively performing security analysis on your organization&#39;s most used OSS components and reducing risk to consume malicious packages are the themes of this maturity level. Scanning for malware in OSS before the package is downloaded is key toward preventing compromise. Then, to perform proactive security analysis of OSS requires that an organization can clone the source code to an internal location. Proactive security analysis helps you look for not-yet-discovered vulnerabilities, as well as identifying other threat categories such as detecting backdoors.
 
 **Level 4** – This level is considered aspirational in most cases as it is difficult to implement at scale. Rebuilding OSS on trusted build infrastructure is a defensive step to ensure that the OSS was not compromised at build time. Build time attacks are performed by the most sophisticated adversaries and may not occur very frequently. Thus, this level of maturity is what&#39;s required to defend against the most sophisticated adversaries. Additionally, rebuilding OSS has many subtle technical challenges such as what to name the package to prevent collisions with upstream? How to make sure all developers use the internal package instead of the external? Rebuilding also enables you to implement fixes (if needed) and deploy them at scale across your organization.
 
@@ -315,7 +315,7 @@ Below is a table of the requirements mapped to the 8 different practices. Two of
 | | SCA-2 | L1 | Scan OSS for licenses | Ensure your organization remains in compliance with the software license |
 | | SCA-3 | L2 | Scan OSS to determine if its end-of-life | For security purposes, no organization should take a dependency on software that is no longer receiving updates |
 | | SCA-4 | L3 | Scan OSS for malware | Able to prevent ingestion of malware into your CI/CD environment |
-| | SCA-5 | L3 | Perform proactive security review of OSS | Identify zero-day vulnerabilities and confidentially contribute fixes back to the upstream maintainer |
+| | SCA-5 | L3 | Perform proactive security analysis of OSS | Identify zero-day vulnerabilities and other threat categories (i.e. backdoors) and responsibly disclose them to the upstream OSS project |
 | *Inventory It* | INV-1 | L1 | Maintain an automated inventory of all OSS used in development | Able to respond to incidents by knowing who is using what OSS where. This can also be accomplished by generating SBOMs for your software. |
 | | INV-2 | L2 | Have an OSS Incident Response Plan | This is a defined, repeatable process that enables your organization to quickly respond to reported OSS incidents |
 | *Update It* | UPD-1 | L1 | Update vulnerable OSS manually | Ability to resolve vulnerabilities |
@@ -378,7 +378,7 @@ There are many other security frameworks, guides, and controls. This section map
 | SCA-2 | Scan OSS for licenses | **CIS SSC SG** : 1.5.6, 3.2.3 <br /> **OWASP SCVS:** 5.12 <br /> **CNCF SSC:** Scan software for license implications |
 | SCA-3 | Scan OSS to determine if its end-of-life | **SP800218** : PW.4.1 <br /> **SP800161** : SA-4, SA-5, SA-8(3), SA-10(6), SR-3, SR-4 <br /> **OWASP SCVS:** 5.8 |
 | SCA-4 | Scan OSS for malware | |
-| SCA-5 | Perform proactive security review of OSS | **SP800218** : PW.4.4 <br /> **SP800161** : SA-4, SA-8, SA-9, SA-9(3), SR-3, SR-4, SR-4(3), SR-4(4) <br /> **OWASP SCVS:** 5.2, 5.3, |
+| SCA-5 | Perform proactive security analysis of OSS | **SP800218** : PW.4.4 <br /> **SP800161** : SA-4, SA-8, SA-9, SA-9(3), SR-3, SR-4, SR-4(3), SR-4(4) <br /> **OWASP SCVS:** 5.2, 5.3, |
 | INV-1 | Maintain an automated inventory of all OSS used in development | **OWASP SCVS:** 1.1, 1.3, 1.8, 5.11 <br /> **CNCF SSC:** Track dependencies between open source components |
 | INV-2 | Have an OSS Incident Response Plan | **SP800218** : RV.2.2 <br /> **SP800161** : SA-5, SA-8, SA-10, SA-11, SA-15(7) |
 | UPD-1 | Update vulnerable OSS manually | |
